@@ -1,8 +1,15 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { Transportation } from "@/components/Transportation";
+import { TopDestinationsSlider } from "@/components/TopDestinationsSlider";
+import { AboutCompany } from "@/components/AboutCompany";
+import { WhatWeOffer } from "@/components/WhatWeOffer";
+import { TourPackages } from "@/components/TourPackages";
 import { Accommodations } from "@/components/Accommodations";
-import { Destinations } from "@/components/Destinations";
+import { ExperienceGallery } from "@/components/ExperienceGallery";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { Testimonials } from "@/components/Testimonials";
+import { CallToAction } from "@/components/CallToAction";
+import { TopDestinationsShowcase } from "@/components/TopDestinationsShowcase";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -10,9 +17,16 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
-      <Transportation />
+      <TopDestinationsSlider />
+      <AboutCompany />
+      <WhatWeOffer />
+      <TourPackages />
       <Accommodations />
-      <Destinations />
+      <ExperienceGallery />
+      <WhyChooseUs />
+      <Testimonials />
+      <CallToAction />
+      <TopDestinationsShowcase />
       <Footer />
     </div>
   );
