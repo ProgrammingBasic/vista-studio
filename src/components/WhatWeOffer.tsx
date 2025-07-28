@@ -58,14 +58,14 @@ export const WhatWeOffer = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center justify-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-travel-teal rounded-full mr-2"></div>
                       {feature}
                     </div>
                   ))}
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}

@@ -19,17 +19,21 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Book Your
+          Explore the World
           <span className="block bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-            Adventure
+            With Vista Travel
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
           Discover breathtaking destinations with our premium vehicle rentals and curated accommodations
         </p>
         
+        <Button variant="hero" size="lg" className="px-12 py-3 text-lg font-semibold mb-8">
+          Explore Destinations & Packages
+        </Button>
+        
         {/* Booking Form */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-travel border border-white/20">
+        {/* <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-travel border border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
             <div className="space-y-2">
               <label className="text-white/80 text-sm font-medium flex items-center gap-2">
@@ -76,7 +80,7 @@ export const Hero = () => {
           <Button variant="hero" size="lg" className="w-full md:w-auto px-12 py-3 text-lg font-semibold">
             Search Adventures
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

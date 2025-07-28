@@ -54,7 +54,7 @@ export const TopDestinationsSlider = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Top Destinations
+            Popular Destinations
           </h2>
           <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -63,7 +63,7 @@ export const TopDestinationsSlider = () => {
         </div>
 
         <div className="relative">
-          <div className="overflow-hidden">
+          <div className="overflow-hidden pt-3">
             <div 
               className="flex transition-transform duration-500 ease-in-out gap-6"
               style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
