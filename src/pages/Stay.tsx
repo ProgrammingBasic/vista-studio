@@ -25,7 +25,7 @@ const tentPricing = [
 const Stay = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
+      {/* <Navigation /> */}
       
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">

@@ -8,6 +8,7 @@ import Stay from "./pages/Stay";
 import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
 import NotFound from "./pages/NotFound";
+import { Navigation } from "./components/Navigation";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <Navigation/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stay" element={<Stay />} />

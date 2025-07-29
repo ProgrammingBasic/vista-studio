@@ -16,7 +16,7 @@ import { Blog } from "@/components/Blog";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
+      {/* <Navigation /> */}
       <Hero />
       <TopDestinationsSlider />
       <AboutCompany />

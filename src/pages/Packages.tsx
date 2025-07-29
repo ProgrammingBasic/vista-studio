@@ -98,9 +98,9 @@ const packages = [
 ];
 
 const categoryColors = {
-  Adventure: "bg-red-500/10 text-red-600 border-red-500/30",
-  Cultural: "bg-purple-500/10 text-purple-600 border-purple-500/30",
-  Nature: "bg-green-500/10 text-green-600 border-green-500/30"
+  Adventure: "bg-red-500/50 text-white border-red-500/30",
+  Cultural: "bg-purple-500/50 text-white border-purple-500/30",
+  Nature: "bg-green-500/50 text-white border-green-500/30"
 };
 
 export default function Packages() {
