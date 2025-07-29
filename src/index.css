@@ -131,6 +131,19 @@ All colors MUST be HSL.
   }
 }
 
+  .animate-scroll-y {
+    @apply animate-[scroll-y_60s_linear_infinite];
+  }
+
+  @keyframes scroll-y {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
 @layer base {
   * {
     @apply border-border;
