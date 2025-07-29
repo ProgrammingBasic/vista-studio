@@ -71,38 +71,29 @@ export const AboutCompany = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="h-48 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=300&fit=crop"
-                  alt="Mountain adventure"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="h-32 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=200&fit=crop"
-                  alt="Group travel"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+          <div className="overflow-hidden rounded-lg relative">
+            <div className="animate-scroll-y columns-2 gap-4">
+              {Array(8).fill(null).map((_, index) => {
+                const srcs = ["/src/assets/hero-mountains.jpg", "/src/assets/camping.jpg", "/src/assets/homestay.jpg", "/src/assets/hotel.jpg"];
+                const src = srcs[index % srcs.length];
+                const isTall = index % 3 === 0; // Make every third image tall
+                return (
+                  <div 
+                    key={index} 
+                    className={`mb-4 rounded-lg overflow-hidden ${isTall ? 'h-60' : 'h-40'}`}
+                  >
+                    <img 
+                      src={src}
+                      alt={`Travel image ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                );
+              })}
             </div>
-            <div className="space-y-4 pt-8">
-              <div className="h-32 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&h=200&fit=crop"
-                  alt="Travel planning"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="h-48 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1518877593221-1f28583780b4?w=400&h=300&fit=crop"
-                  alt="Adventure activities"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-background to-transparent"></div>
+              <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-background to-transparent"></div>
             </div>
           </div>
         </div>
