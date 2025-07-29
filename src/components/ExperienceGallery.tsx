@@ -57,7 +57,7 @@ export const ExperienceGallery = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className=" mx-auto px-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Experience Gallery

@@ -59,7 +59,7 @@ export const Testimonials = () => {
   const maxSlide = Math.max(0, testimonials.length - testimonialsPerView);
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -77,8 +77,8 @@ export const Testimonials = () => {
             style={{ transform: `translateX(-${currentSlide * (100 / testimonialsPerView)}%)` }}
           >
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="min-w-0 flex-shrink-0" style={{ width: `${100 / testimonialsPerView}%` }}>
-                <Card className="group border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-300 h-full">
+              <div key={testimonial.id} className="min-w-0 flex-shrink-0 py-10" style={{ width: `${100 / testimonialsPerView}%` }}>
+                <Card className="group border-0 shadow-md hover:shadow-hover-travel transition-all duration-300 h-full">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-6">
                       <img 

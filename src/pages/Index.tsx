@@ -11,6 +11,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { CallToAction } from "@/components/CallToAction";
 import { TopDestinationsShowcase } from "@/components/TopDestinationsShowcase";
 import { Footer } from "@/components/Footer";
+import { Blog } from "@/components/Blog";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <AboutCompany />
       <WhatWeOffer />
       <TourPackages />
+      <Blog/>
       <Accommodations />
       <ExperienceGallery />
       <WhyChooseUs />
