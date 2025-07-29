@@ -163,7 +163,7 @@ const Stay = () => {
         </div>
       </section>
 
-      <Footer />
+
     </div>
   );
 };

@@ -75,17 +75,28 @@ export default function PackageDetail() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <section className="py-8 border-b">
-        <div className="max-w-7xl mx-auto px-6">
-          <Button 
+      <section className="relative py-20 bg-gradient-to-br from-travel-ocean to-travel-deep pt-40">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            {packageInfo.name}
+          </h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            Discover amazing destinations with our carefully crafted tour packages
+          </p>
+        <Button 
             variant="outline" 
             onClick={() => navigate('/packages')}
-            className="mb-6"
+            className="mb-6 bg-white/30 text-white hover:bg-white/20 mt-10"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Packages
           </Button>
+        </div>
+      </section>
+      {/* Header */}
+      <section className="py-8 border-b">
+        <div className="max-w-7xl mx-auto px-6">
+          
           
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
@@ -243,7 +254,7 @@ export default function PackageDetail() {
             <Button variant="secondary" size="lg">
               Contact Us
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-travel-ocean">
+            <Button variant="outline" size="lg" className="border-white text-travel-ocean hover:bg-white hover:text-travel-ocean">
               Download Itinerary
             </Button>
           </div>

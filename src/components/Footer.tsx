@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-travel-ocean to-travel-ocean-deep text-white">
       {/* Newsletter Section */}
-      <div className="border-b border-white/10">
+      {/* <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">Join Our Newsletter</h3>
@@ -24,7 +24,7 @@ export const Footer = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
       
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 py-16">

@@ -29,7 +29,7 @@ const Index = () => {
       <Testimonials />
       <CallToAction />
       <TopDestinationsShowcase />
-      <Footer />
+
     </div>
   );
 };
