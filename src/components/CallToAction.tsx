@@ -34,7 +34,7 @@ export const CallToAction = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="px-8 py-4 text-lg border-white/30 text-white hover:bg-white/20"
+            className="px-8 py-4 text-lg border-white/30 bg-white/30 text-white hover:bg-white/20"
           >
             View All Packages
           </Button>
