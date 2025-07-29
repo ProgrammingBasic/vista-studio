@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Star } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const topDestinations = [
   {
@@ -47,6 +48,20 @@ const topDestinations = [
 ];
 
 export const TopDestinationsShowcase = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerView = 3;
+  const maxIndex = Math.max(0, topDestinations.length - itemsPerView);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prev => {
+        const nextIndex = prev + 1;
+        return nextIndex > maxIndex ? 0 : nextIndex;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [maxIndex]);
+
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
@@ -60,40 +75,45 @@ export const TopDestinationsShowcase = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {topDestinations.map((destination) => (
-            <Card 
-              key={destination.id}
-              className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer"
+        <div className="relative">
+          <div className="overflow-hidden pt-3">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out gap-8"
+              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={destination.image}
-                  alt={destination.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-white font-semibold">{destination.rating}</span>
-                  </div>
+              {topDestinations.map((destination) => (
+                <div key={destination.id} className="min-w-0 flex-shrink-0" style={{ width: `${100 / itemsPerView}%` }}>
+                  <Card className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-96">
+                    <div className="relative h-full">
+                      <img 
+                        src={destination.image}
+                        alt={destination.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      <div className="absolute top-4 right-4">
+                        <div className="flex items-center space-x-1 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-white font-semibold">{destination.rating}</span>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-6 left-6">
+                        <div className="flex items-center gap-2 mb-2">
+                          <MapPin className="h-5 w-5 text-white" />
+                          <h3 className="text-2xl font-bold text-white">
+                            {destination.name}
+                          </h3>
+                        </div>
+                        <p className="text-gray-100 leading-relaxed">
+                          {destination.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
                 </div>
-              </div>
-              
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <MapPin className="h-5 w-5 text-travel-ocean" />
-                  <h3 className="text-xl font-bold text-travel-ocean">
-                    {destination.name}
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {destination.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
