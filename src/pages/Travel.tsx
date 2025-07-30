@@ -2,7 +2,8 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Bike, Car, Truck, Shield, AlertTriangle } from "lucide-react";
+import { Bike, Car, Truck, Shield, AlertTriangle, Clock, Users, MapPin } from "lucide-react";
+
 
 const vehicles = [
   {
@@ -65,9 +66,38 @@ const Travel = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/21014/pexels-photo.jpg"
+            alt="Camping under stars"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Vehicle Rentals
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 mb-8">
+            Explore the mountains with our premium vehicle rental services
+          </p>
+          <div className="flex items-center justify-center gap-4 text-white/80">
+            <div className="flex items-center gap-1">
+              <MapPin className="h-5 w-5" />
+              <span>Premium Vehicles</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Shield className="h-5 w-5" />
+              <span>Safety Assured</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop"
@@ -85,7 +115,7 @@ const Travel = () => {
             Explore the mountains with our premium vehicle rental services
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Vehicles Grid */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
@@ -104,12 +134,12 @@ const Travel = () => {
             {vehicles.map((vehicle) => {
               const IconComponent = vehicle.icon;
               return (
-                <Card 
+                <Card
                   key={vehicle.id}
                   className="group border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 overflow-hidden"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img 
+                    <img
                       src={vehicle.image}
                       alt={vehicle.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -126,7 +156,7 @@ const Travel = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-xl font-bold text-travel-ocean">
@@ -139,7 +169,7 @@ const Travel = () => {
                         <div className="text-sm text-muted-foreground">per day</div>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2 mb-6">
                       {vehicle.details.map((detail, index) => (
                         <div key={index} className="flex items-center text-sm text-muted-foreground">
@@ -180,15 +210,15 @@ const Travel = () => {
                     <p>• Fuel costs will be borne by the customer/group.</p>
                   </div>
                 </div>
-                
+
                 <div className="border-t pt-6">
                   <h4 className="font-semibold text-foreground mb-3">
                     Additional Services
                   </h4>
                   <div className="bg-travel-ocean/5 rounded-lg p-4 border border-travel-ocean/20">
                     <p className="text-sm text-muted-foreground">
-                      <strong className="text-travel-teal">NOTE:</strong> We also provide services of an on-road mechanic if you require. 
-                      The charge is <strong className="text-travel-teal">₹2,000 per day</strong> inclusive of food and lodging. 
+                      <strong className="text-travel-teal">NOTE:</strong> We also provide services of an on-road mechanic if you require.
+                      The charge is <strong className="text-travel-teal">₹2,000 per day</strong> inclusive of food and lodging.
                       The fuel costs for the mechanic will however be borne by the customer/group.
                     </p>
                   </div>

@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Users } from "lucide-react";
+import { MapPin, Clock, Users, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const packages = [
@@ -109,7 +109,36 @@ export default function Packages() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-travel-ocean to-travel-deep">
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/13894718/pexels-photo-13894718.jpeg"
+            alt="Camping under stars"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+        </div>
+
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Tour Packages
+          </h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            Discover amazing destinations with our carefully crafted tour packages
+          </p>
+          <div className="flex items-center justify-center gap-4 text-white/80 mt-5">
+            <div className="flex items-center gap-1">
+              <MapPin className="h-5 w-5" />
+              <span>Premium Packages</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Shield className="h-5 w-5" />
+              <span>Safety Assured</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="relative py-20 bg-gradient-to-br from-travel-ocean to-travel-deep">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Tour Packages
@@ -118,27 +147,27 @@ export default function Packages() {
             Discover amazing destinations with our carefully crafted tour packages
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Packages Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {packages.map((pkg) => (
-              <Card 
+              <Card
                 key={pkg.id}
                 className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
+                  <img
                     src={pkg.image}
                     alt={pkg.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <Badge 
-                      variant="outline" 
+                    <Badge
+                      variant="outline"
                       className={`${categoryColors[pkg.category as keyof typeof categoryColors]} font-medium`}
                     >
                       {pkg.category}
@@ -171,8 +200,8 @@ export default function Packages() {
                     {pkg.description}
                   </p>
 
-                  <Button 
-                    variant="travel" 
+                  <Button
+                    variant="travel"
                     className="w-full group-hover:scale-105 transition-transform duration-300"
                     onClick={() => navigate(`/packages/${pkg.id}`)}
                   >
