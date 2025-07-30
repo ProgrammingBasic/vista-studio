@@ -77,24 +77,47 @@ export default function PackageDetail() {
     <div className="min-h-screen bg-background">
       <section className="relative py-20 bg-gradient-to-br from-travel-ocean to-travel-deep pt-40">
         <div className="max-w-7xl mx-auto px-6 text-center">
+          {/* Category Badge on top */}
+          <Badge 
+            variant="outline" 
+            className={`mb-4 ${categoryColors[packageInfo.category as keyof typeof categoryColors]} font-medium`}
+          >
+            {packageInfo.category}
+          </Badge>
+          {/* Package Name */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             {packageInfo.name}
           </h1>
+          {/* Package Info */}
+          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
+            <div className="flex items-center gap-2 text-white/90">
+              <MapPin className="h-4 w-4" />
+              <span>{packageInfo.location}</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90">
+              <Clock className="h-4 w-4" />
+              <span>{packageInfo.duration}</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90">
+              <Users className="h-4 w-4" />
+              <span>{packageInfo.groupSize}</span>
+            </div>
+          </div>
+          {/* Book Now Button */}
+          <Button 
+            variant="travel" 
+            size="lg"
+            className="mb-8"
+          >
+            Book Now
+          </Button>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Discover amazing destinations with our carefully crafted tour packages
           </p>
-        <Button 
-            variant="outline" 
-            onClick={() => navigate('/packages')}
-            className="mb-6 bg-white/30 text-white hover:bg-white/20 mt-10"
-          >
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Packages
-          </Button>
         </div>
       </section>
       {/* Header */}
-      <section className="py-8 border-b">
+      {/* <section className="py-8 border-b">
         <div className="max-w-7xl mx-auto px-6">
           
           
@@ -131,7 +154,7 @@ export default function PackageDetail() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Overview */}
       <section className="py-12">

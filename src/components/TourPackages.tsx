@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const packages = [
 	{
@@ -151,12 +152,14 @@ export const TourPackages = () => {
 												))}
 											</div>
 										</div>
-										<Button
-											variant="travel"
-											className=" w-full transition-transform duration-300 border border-white/20 rounded-full"
-										>
-											More Info
-										</Button>
+										<Link to={`/packages/${pkg.id}`}>
+											<Button
+												variant="travel"
+												className=" w-full transition-transform duration-300 border border-white/20 rounded-full"
+											>
+												More Info
+											</Button>
+										</Link>
 									</div>
 								</div>
 							</CardContent>
