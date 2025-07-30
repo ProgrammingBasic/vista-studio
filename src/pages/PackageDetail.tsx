@@ -179,17 +179,49 @@ export default function PackageDetail() {
             
             <TabsContent value="reach">
               <h3 className="text-2xl font-bold mb-6">How to Reach</h3>
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-6 w-6 text-travel-ocean mt-1" />
-                    <div>
-                      <h4 className="text-lg font-semibold mb-2">Transportation Details</h4>
-                      <p className="text-muted-foreground">{packageInfo.howToReach}</p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="h-6 w-6 text-travel-ocean mt-1" />
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2">Transportation Details</h4>
+                        <p className="text-muted-foreground mb-4">{packageInfo.howToReach}</p>
+                        
+                        <div className="space-y-2">
+                          <h5 className="font-medium text-foreground">Address:</h5>
+                          <p className="text-sm text-muted-foreground">
+                            Starting Point: Shimla Bus Stand<br/>
+                            Shimla, Himachal Pradesh 171001<br/>
+                            Contact: +91 9876543210
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+                
+                <Card>
+                  <CardContent className="p-6">
+                    <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                      <MapPin className="h-5 w-5 text-travel-ocean" />
+                      Location Map
+                    </h4>
+                    <div className="relative h-64 bg-muted rounded-lg overflow-hidden">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123456789!2d77.1734!3d31.1048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390578e3dc0053ad%3A0x3e1cf40b65b80aaa!2sShimla%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1635678901234!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="rounded-lg"
+                      ></iframe>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </TabsContent>
             
             <TabsContent value="included">
