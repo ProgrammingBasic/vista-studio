@@ -8,6 +8,7 @@ import Stay from "./pages/Stay";
 import Travel from "./pages/Travel";
 import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
+import CreatePlan from "./pages/CreatePlan";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/travel" element={<Travel />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/packages/:id" element={<PackageDetail />} />
+          <Route path="/create-plan" element={<CreatePlan />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
