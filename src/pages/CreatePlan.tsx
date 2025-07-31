@@ -117,7 +117,7 @@ const CreatePlan = () => {
             <Check className="w-4 h-4 text-primary-foreground" />
           </div>
         )}
-        <CardContent className="p-4 text-center flex flex-row items-center justify-start space-x-1">
+        <CardContent className="p-4 text-center flex flex-row items-center justify-start space-x-2">
           <Icon className="w-6 h-6 text-primary" />
           <p className="text-sm font-medium">{item.name}</p>
         </CardContent>
