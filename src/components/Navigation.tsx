@@ -29,7 +29,7 @@ export const Navigation = () => {
             <a href="/packages" className={`transition-colors ${scrolled ? "text-black/90 hover:text-black" : "text-white/90 hover:text-white"}`}>Our Packages</a>
             <a href="/travel" className={`transition-colors ${scrolled ? "text-black/90 hover:text-black" : "text-white/90 hover:text-white"}`}>Vehicles</a>
             <a href="/stay" className={`transition-colors ${scrolled ? "text-black/90 hover:text-black" : "text-white/90 hover:text-white"}`}>Stays</a>
-            <a href="#" className={`transition-colors ${scrolled ? "text-black/90 hover:text-black" : "text-white/90 hover:text-white"}`}>About</a>
+            <a href="/create-plan" className={`transition-colors ${scrolled ? "text-black/90 hover:text-black" : "text-white/90 hover:text-white"}`}>Create Your Plan</a>
           </div>
           
           {/* Contact & Mobile Menu */}
