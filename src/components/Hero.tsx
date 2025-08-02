@@ -1,20 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CalendarDays, MapPin, Users, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-mountains.jpg";
+import { CalendarDays, MapPin, Users, ArrowRight, Scale } from "lucide-react";
 
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Mountain landscape" 
-          className="w-full h-full object-cover"
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/q3eL0FUrlRs?si=W5-yb_PXRxGQYNtq&controls=0&autoplay=1&mute=1&loop=1&playlist=q3eL0FUrlRs&start=8&modestbranding=1&showinfo=0&rel=0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover", // Ensures the video covers the area
+            pointerEvents: "none",
+            transform: "scale(1.3)", // Zoom in the video (adjust as needed)
+            transformOrigin: "center center",// Slightly scale the video for a better effect
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
       </div>
       
       {/* Content */}
