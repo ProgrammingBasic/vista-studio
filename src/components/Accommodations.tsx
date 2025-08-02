@@ -60,12 +60,12 @@ export const Accommodations = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {accommodation.description}
                 </p>
-                <Button 
+                {/* <Button 
                   variant="outline" 
                   className="w-full border-travel-ocean text-travel-ocean hover:bg-travel-ocean hover:text-white group-hover:scale-105 transition-all duration-300"
                 >
                   Explore Options
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           ))}

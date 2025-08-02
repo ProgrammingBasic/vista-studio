@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CalendarDays, MapPin, Users } from "lucide-react";
+import { CalendarDays, MapPin, Users, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-mountains.jpg";
+
 
 export const Hero = () => {
   return (
@@ -28,10 +29,23 @@ export const Hero = () => {
           Discover breathtaking destinations with our premium vehicle rentals and curated accommodations
         </p>
         
-        <Button variant="hero" size="lg" className="px-12 py-3 text-lg font-semibold mb-8">
-          Explore Destinations & Packages
-        </Button>
-        
+       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="px-8 py-4 text-lg group"
+          >
+            Book Your Tour Now
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="px-8 py-4 text-lg border-white/30 bg-white/30 text-white hover:bg-white/20"
+          >
+            View All Packages
+          </Button>
+        </div>
         {/* Booking Form */}
         {/* <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-travel border border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">

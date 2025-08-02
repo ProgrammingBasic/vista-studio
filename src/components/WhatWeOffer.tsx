@@ -1,5 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Route, Home, Package, FileText } from "lucide-react";
+// import { Route, Home, Package, FileText } from "lucide-react";
+import Route from '@/assets/icons/road-map.png'
+import Home from '@/assets/icons/home.png'
+import Package from '@/assets/icons/honeymoon.png'
+import FileText from '@/assets/icons/permit.png'
 
 const services = [
   {
@@ -50,7 +54,8 @@ export const WhatWeOffer = () => {
             >
               <CardContent className="p-2 text-center">
                 <div className="w-40 h-40 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="h-8 w-8 text-white" />
+                  {/* <service.icon className="h-8 w-8 text-white" /> */}
+                  <img src={service.icon} alt="" className="w-20" />
                 </div>
                 <h3 className="text-xl font-semibold text-travel-ocean mb-4">
                   {service.title}
