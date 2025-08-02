@@ -6,28 +6,28 @@ import { useState } from "react";
 const destinations = [
 	{
 		id: 1,
-		name: "Manali",
-		image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+		name: "Mechuka",
+		image: "https://voysiri.in/wp-content/uploads/2022/12/yboTIPAis6.jpg",
 	},
 	{
 		id: 2,
-		name: "Spiti Valley",
-		image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop",
+		name: "Tawang",
+		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
 	},
 	{
 		id: 3,
-		name: "Goa Beaches",
-		image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop",
+		name: "Dong",
+		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
 	},
 	{
 		id: 4,
-		name: "Kerala Backwaters",
-		image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+		name: "Namsai",
+		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
 	},
 	{
 		id: 5,
-		name: "Ladakh",
-		image: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=400&h=300&fit=crop",
+		name: "Bomdila",
+		image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bomdila_Monastery%2C_Arunachal_Pradesh.jpg/1024px-Bomdila_Monastery%2C_Arunachal_Pradesh.jpg",
 	},
 
 ];

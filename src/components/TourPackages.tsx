@@ -7,54 +7,54 @@ import { Link } from "react-router-dom";
 const packages = [
 	{
 		id: 1,
-		name: "Himalayan Adventure",
-		image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
-		duration: "7 Days",
+		name: "The world of mystic beauty awaits you at TAWANG",
+		image: "https://himavaatvastya.home.blog/wp-content/uploads/2020/06/untitled-design52.png?w=1568",
+		duration: "5 Days 4 Nights",
 		groupSize: "4-8 People",
 		location: "Himachal Pradesh",
 		highlights: ["Mountain Trekking", "Local Culture", "Scenic Views"],
 	},
 	{
 		id: 2,
-		name: "Spiti Valley Explorer",
-		image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop",
-		duration: "10 Days",
+		name: "Visit magnificent MECHUKA & AALO",
+		image: "https://s7ap1.scene7.com/is/image/incredibleindia/mechuka-town-mechuka-arunachal%20pradesh-city-ff?qlt=82&ts=1726742794045",
+		duration: "5 Days 4 Nights",
 		groupSize: "6-12 People",
 		location: "Spiti Valley",
 		highlights: ["Cold Desert", "Monasteries", "Stargazing"],
 	},
 	{
 		id: 3,
-		name: "Coastal Paradise",
-		image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop",
-		duration: "5 Days",
+		name: "Get tucked away in the Himalayan foothills of ZIRO",
+		image: "https://upload.wikimedia.org/wikipedia/commons/1/1e/A_cross_section_of_luch_green_valley_of_Ziro.jpg",
+		duration: "2 Days 2 Nights",
 		groupSize: "2-6 People",
 		location: "Goa",
 		highlights: ["Beach Activities", "Water Sports", "Nightlife"],
 	},
 	{
 		id: 4,
-		name: "Backwater Bliss",
-		image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
-		duration: "6 Days",
+		name: "A day in NAMSAI (Lathao & Tengapani)",
+		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2020/08/116132834_283557032935433_5540850363813794187_n.jpg",
+		duration: "1 Days",
 		groupSize: "4-10 People",
 		location: "Kerala",
 		highlights: ["Houseboat Stay", "Ayurveda", "Nature Walks"],
 	},
 	{
 		id: 5,
-		name: "Desert Safari",
-		image: "https://images.unsplash.com/photo-1582659962893-e4bee469d0ca?w=400&h=300&fit=crop",
-		duration: "4 Days",
+		name: "Explore flora & fauna of NAMDAPHA national park",
+		image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7HTp6fGoLiDGZ82z7BboPdMgFR8rjU3Iq6EVmhtYHyLsmBy7N0-0p7n8v7jC1_b8t27C6zpL2gSTLp66kqrs-lS2pVmy200DLobPTthyZ-Vz_aF1HNkjeOlvzW__iJ10JGF9QJOtk-tJn/s1600/1E1A5586.jpeg",
+		duration: "7 Days 6 Nights",
 		groupSize: "6-15 People",
 		location: "Rajasthan",
 		highlights: ["Camel Safari", "Desert Camping", "Folk Culture"],
 	},
 	{
 		id: 6,
-		name: "Ladakh Expedition",
-		image: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=400&h=300&fit=crop",
-		duration: "12 Days",
+		name: "Road to BOMDILA & TAWANG",
+		image: "https://www.kiomoi.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fkmadmin%2Fimage%2Fupload%2Fc_scale%2Cw_832%2Ff_auto%2Fv1695293116%2Fkiomoi%2Ftawang_monastery_arunachal_pradesh_4051.webp&w=1920&q=75",
+		duration: "5 Days 4 Nights",
 		groupSize: "4-8 People",
 		location: "Ladakh",
 		highlights: ["High Altitude", "Buddhist Culture", "Adventure Sports"],
@@ -97,18 +97,18 @@ export const TourPackages = () => {
 								{/* Sliding content wrapper */}
 								<div
 									className="
-      absolute left-0 right-0 bottom-0
-      px-6
-      flex flex-col justify-end
-      transition-all duration-500
-      translate-y-0
-      group-hover:-translate-y-10
-    "
+										absolute left-0 right-0 bottom-0
+										px-6
+										flex flex-col justify-end
+										transition-all duration-500
+										translate-y-0
+										group-hover:-translate-y-10
+										"
 									style={{ zIndex: 30 }}
 								>
 									{/* Always visible: name, days, people */}
 									<div>
-										<h3 className="text-2xl font-bold text-white mb-2 drop-shadow">
+										<h3 className="text-2xl font-thin text-white mb-2 drop-shadow">
 											{pkg.name}
 										</h3>
 										<div className="flex items-center gap-4 mb-2 text-sm text-white/80">
