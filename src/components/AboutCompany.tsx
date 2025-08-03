@@ -30,7 +30,7 @@ const stats = [
 
 export const AboutCompany = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-[#f1f9fc]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>

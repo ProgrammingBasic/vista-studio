@@ -56,7 +56,7 @@ export const ExperienceGallery = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
+    <section className="py-20 bg-white">
       <div className=" mx-auto px-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

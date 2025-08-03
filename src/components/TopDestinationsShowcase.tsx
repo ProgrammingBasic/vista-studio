@@ -4,47 +4,30 @@ import { useState, useEffect } from "react";
 
 const topDestinations = [
   {
-    id: 1,
-    name: "Manali",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
-    rating: 4.8,
-    description: "Snow-capped mountains and adventure sports"
-  },
-  {
-    id: 2,
-    name: "Spiti Valley",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop",
-    rating: 4.9,
-    description: "Cold desert and ancient monasteries"
-  },
-  {
-    id: 3,
-    name: "Goa",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=300&fit=crop",
-    rating: 4.7,
-    description: "Beautiful beaches and vibrant nightlife"
-  },
-  {
-    id: 4,
-    name: "Kerala",
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
-    rating: 4.8,
-    description: "Backwaters and lush green landscapes"
-  },
-  {
-    id: 5,
-    name: "Ladakh",
-    image: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=400&h=300&fit=crop",
-    rating: 4.9,
-    description: "High altitude adventure and pristine beauty"
-  },
-  {
-    id: 6,
-    name: "Rajasthan",
-    image: "https://images.unsplash.com/photo-1582659962893-e4bee469d0ca?w=400&h=300&fit=crop",
-    rating: 4.6,
-    description: "Royal heritage and desert landscapes"
-  }
+		id: 1,
+		name: "Mechuka",
+		image: "https://voysiri.in/wp-content/uploads/2022/12/yboTIPAis6.jpg",
+	},
+	{
+		id: 2,
+		name: "Tawang",
+		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
+	},
+	{
+		id: 3,
+		name: "Dong",
+		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
+	},
+	{
+		id: 4,
+		name: "Namsai",
+		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
+	},
+	{
+		id: 5,
+		name: "Bomdila",
+		image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bomdila_Monastery%2C_Arunachal_Pradesh.jpg/1024px-Bomdila_Monastery%2C_Arunachal_Pradesh.jpg",
+	},
 ];
 
 export const TopDestinationsShowcase = () => {

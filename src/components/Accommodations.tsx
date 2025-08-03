@@ -8,19 +8,25 @@ const accommodations = [
   {
     id: 1,
     title: "Camping & Rentals",
-    image: campingImage,
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Wilderness_Adventure_Camps.jpg",
     description: "Experience the great outdoors with our premium camping equipment and scenic locations"
   },
   {
     id: 2,
-    title: "Luxury Resorts",
-    image: hotelImage,
+    title: "Homestays",
+    image: "https://ik.imagekit.io/bbhed67kj/wp-content/uploads/2022/10/Luxury-Sakleshpur-Homestay-Near-Waterfalls-1.jpg",
     description: "Indulge in world-class amenities and breathtaking views at our partner resorts"
   },
   {
     id: 3,
-    title: "Authentic Homestays",
-    image: homestayImage,
+    title: "Resorts & Hotels",
+    image: "https://tungtaoresort.com/wp-content/uploads/2021/12/2024-08-25-1.jpg",
+    description: "Connect with local culture through our carefully selected homestay experiences"
+  },
+  {
+    id: 4,
+    title: "Zostels",
+    image: "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201810121132474064-f2138dc0b69c11e882cb0204e80e7934.jpg",
     description: "Connect with local culture through our carefully selected homestay experiences"
   }
 ];
@@ -28,7 +34,7 @@ const accommodations = [
 export const Accommodations = () => {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Accommodations
@@ -39,17 +45,17 @@ export const Accommodations = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {accommodations.map((accommodation) => (
             <Card 
               key={accommodation.id}
-              className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3"
+              className="group overflow-hidden border-0  transition-all duration-500 hover:-translate-y-3"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden rounded-lg">
                 <img 
                   src={accommodation.image}
                   alt={accommodation.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">

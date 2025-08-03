@@ -12,6 +12,8 @@ import { CallToAction } from "@/components/CallToAction";
 import { TopDestinationsShowcase } from "@/components/TopDestinationsShowcase";
 import { Footer } from "@/components/Footer";
 import { Blog } from "@/components/Blog";
+import WhatWeDo from "@/components/WhatWeDo";
+import Adventure from "@/components/Adventure";
 
 const Index = () => {
   return (
@@ -19,11 +21,13 @@ const Index = () => {
       {/* <Navigation /> */}
       <Hero />
       <TopDestinationsSlider />
+      <WhatWeDo />
+      <Adventure />
       <AboutCompany />
       <WhatWeOffer />
       <TourPackages />
-      <Blog/>
       <Accommodations />
+      <Blog/>
       <ExperienceGallery />
       <WhyChooseUs />
       <Testimonials />

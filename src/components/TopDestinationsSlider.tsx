@@ -1,56 +1,65 @@
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const destinations = [
 	{
 		id: 1,
-		name: "Mechuka",
+		name: "Trekking Tour",
 		image: "https://voysiri.in/wp-content/uploads/2022/12/yboTIPAis6.jpg",
 	},
 	{
 		id: 2,
-		name: "Tawang",
+		name: "Cycle Expedition",
 		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
 	},
 	{
 		id: 3,
-		name: "Dong",
+		name: "Hiking Festival",
 		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
 	},
 	{
 		id: 4,
-		name: "Namsai",
+		name: "Photography Fest",
 		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
 	},
-	{
-		id: 5,
-		name: "Bomdila",
-		image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Bomdila_Monastery%2C_Arunachal_Pradesh.jpg/1024px-Bomdila_Monastery%2C_Arunachal_Pradesh.jpg",
-	},
+	
 
 ];
 
 export const TopDestinationsSlider = () => {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const itemsPerView = 3; // Show only three cards at a time
-	const maxIndex = Math.max(0, destinations.length - itemsPerView);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const itemsPerView = 3; // Show only three cards at a time
+    const maxIndex = Math.max(0, destinations.length - itemsPerView);
 
-	const nextSlide = () => {
-		setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
-	};
+    // Auto-loop logic
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-	const prevSlide = () => {
-		setCurrentIndex((prev) => Math.max(prev - 1, 0));
-	};
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+        }, 3500); // Change slide every 3.5 seconds
 
-	return (
-		<section className="py-20 bg-white">
-			<div className="max-w-7xl mx-auto px-6">
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [maxIndex]);
+
+    const nextSlide = () => {
+        setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+    };
+
+    return (
+        <section className="py-20 bg-white">
+			<div className="container mx-auto px-6">
 				<div className="text-center mb-12">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						Popular Destinations
+						Upcoming Events & Activities
 					</h2>
 					<div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
 					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -74,7 +83,7 @@ export const TopDestinationsSlider = () => {
 									className="min-w-0 flex-shrink-0"
 									style={{ width: `${100 / itemsPerView}%` }}
 								>
-									<Card className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[28rem]">
+									<Card className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[20rem]">
 										{/* Increased height from h-80 to h-[28rem] */}
 										<div className="relative h-full">
 											<img

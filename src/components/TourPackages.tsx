@@ -63,11 +63,11 @@ const packages = [
 
 export const TourPackages = () => {
 	return (
-		<section className="py-20 bg-background">
+		<section className="py-20 bg-[#f1f9fc]">
 			<div className="max-w-7xl mx-auto px-6">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						Tour Packages
+						Our Top Destinations
 					</h2>
 					<div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
 					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
