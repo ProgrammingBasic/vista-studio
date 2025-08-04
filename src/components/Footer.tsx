@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-travel-ocean to-travel-ocean-deep text-white">
+    <footer className="bg-[#31b7d0] text-white">
       {/* Newsletter Section */}
       {/* <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-16">

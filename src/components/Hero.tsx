@@ -27,14 +27,14 @@ export const Hero = () => {
             transformOrigin: "center center",// Slightly scale the video for a better effect
           }}
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
           Explore the World
-          <span className="block bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+          <span className="block text-white">
             With Vista Travel
           </span>
         </h1>

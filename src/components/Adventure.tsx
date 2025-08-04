@@ -45,7 +45,7 @@ export default function PostGrid() {
     return (
         <section className="bg-white py-40 px-4">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 uppercase">
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 uppercase font-primary tracking-wide">
                     Fun Activities to do
                 </h2>
                 <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
