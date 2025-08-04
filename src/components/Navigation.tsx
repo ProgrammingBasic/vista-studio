@@ -64,7 +64,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Left Side - Logo/Brand */}
             <div className="text-2xl font-bold text-white">
-              Vista Travel
+              Far East
             </div>
             
             {/* Center - Main Menu */}

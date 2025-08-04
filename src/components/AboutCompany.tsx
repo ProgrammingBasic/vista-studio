@@ -20,12 +20,6 @@ const stats = [
     label: "Years Experience",
     description: "Creating unforgettable memories"
   },
-  {
-    icon: Award,
-    number: "99%",
-    label: "Success Rate",
-    description: "Perfectly executed adventures"
-  }
 ];
 
 export const AboutCompany = () => {
@@ -49,9 +43,9 @@ export const AboutCompany = () => {
               who have discovered the magic of authentic exploration with us.
             </p>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-3 gap-1">
               {stats.map((stat, index) => (
-                <Card key={index} className="border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-300">
+                <Card key={index} className="bg-transparent shadow-none hover:shadow-lg transition-shadow duration-300 border-0">
                   <CardContent className="p-6 text-center">
                     <div className="w-12 h-12 mx-auto mb-4 bg-gradient-ocean rounded-full flex items-center justify-center">
                       <stat.icon className="h-6 w-6 text-white" />
@@ -62,9 +56,9 @@ export const AboutCompany = () => {
                     <p className="text-sm font-semibold text-foreground mb-1">
                       {stat.label}
                     </p>
-                    <p className="text-xs text-muted-foreground">
+                    {/* <p className="text-xs text-muted-foreground">
                       {stat.description}
-                    </p>
+                    </p> */}
                   </CardContent>
                 </Card>
               ))}

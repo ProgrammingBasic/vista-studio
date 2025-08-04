@@ -50,8 +50,8 @@ export const WhyChooseUs = () => {
               className="group bg-white/10 backdrop-blur-sm border-white/20 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3"
             >
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="h-8 w-8 text-white" />
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-8 w-8 text-[#ffff00]" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">
                   {feature.title}
@@ -65,7 +65,7 @@ export const WhyChooseUs = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg" className="px-8">
+          <Button variant="travel" size="lg" className="px-8">
             Start Your Journey
           </Button>
         </div>

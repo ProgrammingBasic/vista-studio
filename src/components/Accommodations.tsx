@@ -78,7 +78,7 @@ export const Accommodations = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg" className="px-8">
+          <Button variant="travel" size="lg" className="px-8">
             View All Stays
           </Button>
         </div>

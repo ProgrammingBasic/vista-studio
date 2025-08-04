@@ -155,7 +155,7 @@ export const TourPackages = () => {
 										<Link to={`/packages/${pkg.id}`}>
 											<Button
 												variant="travel"
-												className=" w-full transition-transform duration-300 border border-white/20 rounded-full"
+												className=" w-full transition-transform duration-300 border border-white/20 rounded-full hover:text-[#ffff00]"
 											>
 												More Info
 											</Button>

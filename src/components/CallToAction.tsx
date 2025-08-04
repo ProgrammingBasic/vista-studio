@@ -11,6 +11,7 @@ export const CallToAction = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-travel-ocean/90 via-travel-teal/80 to-travel-ocean/90"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       <div className="relative max-w-4xl mx-auto px-6 text-center">
@@ -24,17 +25,15 @@ export const CallToAction = () => {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
           <Button 
-            variant="hero" 
             size="lg" 
-            className="px-8 py-4 text-lg group"
+            className="px-8 py-4 text-lg group bg-[#31b7d0] hover:bg-[#2a9bb0] text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Book Your Tour Now
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button 
-            variant="outline" 
             size="lg" 
-            className="px-8 py-4 text-lg border-white/30 bg-white/30 text-white hover:bg-white/20"
+            className="px-8 py-4 text-lg bg-[#ffff00] hover:bg-[#e6e600] text-black font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-[#ffff00]"
           >
             View All Packages
           </Button>

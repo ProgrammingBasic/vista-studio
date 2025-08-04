@@ -46,7 +46,9 @@ export default function ActivitiesSection() {
 
                 {activities.map((activity, index) => (
                     <div key={index} className="space-y-4">
-                        {activity.icon}
+                        <div className="w-40 h-40 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center text-white">      
+                            {activity.icon}
+                        </div>
                         <h3 className="text-lg font-semibold">{activity.title}</h3>
                         <p className="text-sm text-gray-600">{activity.description}</p>
                         <a
