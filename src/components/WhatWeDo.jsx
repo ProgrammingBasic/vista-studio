@@ -7,24 +7,29 @@ import {
     Users,
 } from 'lucide-react';
 
+import Cycle from '@/assets/icons/bicycle.png'
+import Hiking from '@/assets/icons/hiking.png'
+import Rafting from '@/assets/icons/rafting.png'
+import Talking from '@/assets/icons/talking.png'
+
 const activities = [
     {
-        icon: <Bike size={40} color='#31b7d0' className="mx-auto" />,
+        icon: Cycle,
         title: 'Cycling',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
     {
-        icon: <Mountain size={40} color='#31b7d0' className=" mx-auto" />,
+        icon: Hiking,
         title: 'Mountain Trekking',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
     {
-        icon: <Waves size={40} color='#31b7d0' className=" mx-auto" />,
+        icon: Rafting,
         title: 'River Rafting',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
     {
-        icon: <Users size={40} color='#31b7d0' className=" mx-auto" />,
+        icon: Talking,
         title: 'Meet The Locals',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
@@ -47,7 +52,7 @@ export default function ActivitiesSection() {
                 {activities.map((activity, index) => (
                     <div key={index} className="space-y-4">
                         <div className="w-40 h-40 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center text-white">      
-                            {activity.icon}
+                            <img src={activity.icon} alt={activity.title} className="w-20 h-20" />
                         </div>
                         <h3 className="text-lg font-semibold">{activity.title}</h3>
                         <p className="text-sm text-gray-600">{activity.description}</p>

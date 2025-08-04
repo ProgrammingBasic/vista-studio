@@ -50,7 +50,7 @@ export const WhatWeOffer = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="group border-0 shadow-card-travel  "
+              className="group border-0 shadow-none"
             >
               <CardContent className="p-2 text-center">
                 <div className="w-40 h-40 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
