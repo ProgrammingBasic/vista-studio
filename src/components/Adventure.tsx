@@ -44,6 +44,15 @@ export default function PostGrid() {
 
     return (
         <section className="bg-white py-40 px-4">
+            <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 uppercase">
+                    Fun Activities to do
+                </h2>
+                <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
+                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    Comprehensive travel solutions designed to make your journey seamless and unforgettable
+                </p>
+            </div>
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
                 {posts.map((post, idx) => (
                     <div key={idx} className={`relative overflow-hidden rounded-md ${post.cols || ''}`}>
