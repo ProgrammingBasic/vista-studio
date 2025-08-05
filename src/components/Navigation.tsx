@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,11 +70,11 @@ export const Navigation = () => {
             
             {/* Center - Main Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Home</a>
-              <a href="/packages" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Our Packages</a>
-              <a href="/travel" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Vehicles</a>
-              <a href="/stay" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Stays</a>
-              <a href="/create-plan" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Create Your Plan</a>
+              <Link to="/" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Home</Link>
+              <Link to="/packages" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Our Packages</Link>
+              <Link to="/travel" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Vehicles</Link>
+              <Link to="/stay" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Stays</Link>
+              <Link to="/create-plan" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Create Your Plan</Link>
             </div>
             
             {/* Right Side - CTA Button & Mobile Menu */}
