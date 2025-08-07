@@ -14,12 +14,14 @@ import { Footer } from "@/components/Footer";
 import { Blog } from "@/components/Blog";
 import WhatWeDo from "@/components/WhatWeDo";
 import Adventure from "@/components/Adventure";
+import ChatCTA from "@/components/ChatCta";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       {/* <Navigation /> */}
       <Hero />
+      <ChatCTA/>
       <TopDestinationsSlider />
       <WhatWeDo />
       <Adventure />

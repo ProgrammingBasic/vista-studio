@@ -89,7 +89,7 @@ export default function ActivitiesSection() {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center items-center mt-16">
+            {/* <div className="flex justify-center items-center mt-16">
                 <div 
                     className="relative w-96 h-64 rounded-lg overflow-hidden cursor-pointer group"
                     onMouseEnter={handleVideoHover}
@@ -113,7 +113,7 @@ export default function ActivitiesSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
         
     );

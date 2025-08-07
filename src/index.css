@@ -165,3 +165,7 @@ All colors MUST be HSL.
     font-family: 'Merriweather', serif;
   }
 }
+
+.hero-gradient {
+  background: var(--gradient-hero);
+}
