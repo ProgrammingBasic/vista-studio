@@ -15,6 +15,8 @@ import { Blog } from "@/components/Blog";
 import WhatWeDo from "@/components/WhatWeDo";
 import Adventure from "@/components/Adventure";
 import ChatCTA from "@/components/ChatCta";
+import Why from "@/components/Why"
+
 
 const Index = () => {
   return (
@@ -29,12 +31,13 @@ const Index = () => {
       <WhatWeOffer />
       <TourPackages />
       <Accommodations />
+      <Why/>
       <Blog/>
-      <ExperienceGallery />
-      <WhyChooseUs />
+      {/* <ExperienceGallery /> */}
+      {/* <WhyChooseUs /> */}
       <Testimonials />
       <CallToAction />
-      <TopDestinationsShowcase />
+      {/* <TopDestinationsShowcase /> */}
 
     </div>
   );

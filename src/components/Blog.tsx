@@ -41,7 +41,7 @@ const BlogRow = ({
 );
 
 export const Blog = () => (
-  <div className="bg-[#f1f9fc] min-h-screen py-32">
+  <div className="bg-white min-h-screen py-32">
     <BlogRow
       imageSrc="https://images.pexels.com/photos/33207999/pexels-photo-33207999.jpeg"
       imageAlt="Cycling tour"

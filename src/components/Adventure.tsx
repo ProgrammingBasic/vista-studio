@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 export default function PostGrid() {
 
     const posts = [
@@ -55,7 +58,7 @@ export default function PostGrid() {
             </div>
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
                 {posts.map((post, idx) => (
-                    <div key={idx} className={`relative overflow-hidden rounded-md ${post.cols || ''}`}>
+                    <div key={idx} className={`group relative overflow-hidden rounded-md z-0 ${post.cols || ''}`}>
                         <img
                             src={post.image}
                             alt={post.title}
@@ -70,6 +73,22 @@ export default function PostGrid() {
                             <p className="text-sm opacity-90 mt-1">
                                 {post.location} | {post.date}
                             </p>
+                        </div>
+
+                        <div className="absolute inset-0 z-10 flex items-center justify-center p-3 md:p-4 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                            <div className="w-full h-[90%] bg-black/40 backdrop-blur-sm rounded-xl shadow-lg transform translate-y-2 scale-95 group-hover:translate-y-0 group-hover:scale-100 transition-transform duration-300 ease-out flex items-center justify-center pointer-events-auto">
+                                <div className="text-center text-white px-4 py-6 md:py-4">
+                                    <h4 className="text-xl md:text-2xl font-semibold mb-2">{post.title}</h4>
+                                    <p className="text-sm md:text-base text-white/90 mb-4 max-w-xs mx-auto">
+                                        Plan your next {post.title.toLowerCase()} with us.
+                                    </p>
+                                    <Link to="/packages">
+                                        <Button size="sm" variant="secondary" className="bg-white text-black hover:bg-white/90">
+                                            Explore Packages
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))}
