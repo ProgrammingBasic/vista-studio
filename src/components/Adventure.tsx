@@ -46,7 +46,7 @@ export default function PostGrid() {
 
 
     return (
-        <section className="bg-white py-40 px-4">
+        <section className="bg-blue-50 py-40 px-4">
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 uppercase font-primary tracking-wide">
                     Fun Activities to do
@@ -76,9 +76,9 @@ export default function PostGrid() {
                         </div>
 
                         <div className="absolute inset-0 z-10 flex items-center justify-center p-3 md:p-4 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                            <div className="w-full h-[90%] bg-black/40 backdrop-blur-sm rounded-xl shadow-lg transform translate-y-2 scale-95 group-hover:translate-y-0 group-hover:scale-100 transition-transform duration-300 ease-out flex items-center justify-center pointer-events-auto">
+                            <div className="w-full h-[90%] bg-black/60 backdrop-blur-sm rounded-xl shadow-lg transform translate-y-2 scale-95 group-hover:translate-y-0 group-hover:scale-100 transition-transform duration-300 ease-out flex items-center justify-center pointer-events-auto">
                                 <div className="text-center text-white px-4 py-6 md:py-4">
-                                    <h4 className="text-xl md:text-2xl font-semibold mb-2">{post.title}</h4>
+                                    <h4 className="text-xl md:text-2xl font-semibold mb-2 text-[#31b7d0]">{post.title}</h4>
                                     <p className="text-sm md:text-base text-white/90 mb-4 max-w-xs mx-auto">
                                         Plan your next {post.title.toLowerCase()} with us.
                                     </p>

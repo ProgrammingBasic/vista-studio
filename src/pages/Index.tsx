@@ -17,6 +17,7 @@ import Adventure from "@/components/Adventure";
 import ChatCTA from "@/components/ChatCta";
 import Why from "@/components/Why"
 import TopPlaceSlider from "@/components/TopPlaceSlider";
+import OurTeam from "@/components/OurTeam";
 
 
 const Index = () => {
@@ -27,10 +28,11 @@ const Index = () => {
       <ChatCTA/>
       <TopDestinationsSlider />
       <WhatWeDo />
+      <TopPlaceSlider />
       <Adventure />
+      <OurTeam />
       {/* <AboutCompany /> */}
       <WhatWeOffer />
-      <TopPlaceSlider />
       <TourPackages />
       <Accommodations />
       <Why/>
