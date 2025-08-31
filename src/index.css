@@ -169,3 +169,11 @@ All colors MUST be HSL.
 .hero-gradient {
   background: var(--gradient-hero);
 }
+
+.wysiwyg h2 {
+  @apply text-3xl font-bold text-primary border-blue-400 underline;
+}
+
+.wysiwyg h3 {
+  @apply text-2xl font-semibold;
+}

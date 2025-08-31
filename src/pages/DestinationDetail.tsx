@@ -137,9 +137,9 @@ export default function DestinationDetail() {
             {/* Overview */}
             <section className="py-12">
                 <div className="max-w-7xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold mb-6">Overview</h2>
+                    {/* <h2 className="text-3xl font-bold mb-6">Overview</h2> */}
                     <div
-                        className="prose max-w-none mb-10 text-foreground"
+                        className="prose max-w-none mb-10 text-foreground wysiwyg"
                         dangerouslySetInnerHTML={{ __html: destination?.content || "" }}
                     />
 
@@ -187,3 +187,4 @@ export default function DestinationDetail() {
         </div>
     );
 }
+
