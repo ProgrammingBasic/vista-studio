@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import Chatpage from "./pages/ChatPage";
+import Destinations from "./pages/Destinations";
+import DestinationDetail from "./pages/DestinationDetail";
 
 const queryClient = new QueryClient();
 
@@ -27,8 +29,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/stay" element={<Stay />} />
           <Route path="/travel" element={<Travel />} />
+          <Route path="/destinations" element={<Destinations />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/packages/:id" element={<PackageDetail />} />
+          <Route path="/destination/:slug" element={<DestinationDetail />} />
           <Route path="/create-plan" element={<CreatePlan />} />
           <Route path="/chat" element={<Chatpage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
