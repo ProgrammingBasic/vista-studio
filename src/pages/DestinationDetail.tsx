@@ -54,7 +54,15 @@ export default function DestinationDetail() {
     return (
         <div className="min-h-screen bg-background">
             <section className="relative py-20 bg-gradient-to-br from-travel-ocean to-travel-deep pt-40">
-                <div className="max-w-7xl mx-auto px-6 text-center">
+                <div className="absolute inset-0">
+                    <img
+                        src={destination.images[0].url || "https://images.pexels.com/photos/13894718/pexels-photo-13894718.jpeg"}
+                        alt={destination.title || "Destination Image"}
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+                </div>
+                <div className="max-w-7xl mx-auto px-6 text-center z-10 relative">
                     {/* Category Badge on top */}
                     <Badge
                         variant="outline"
@@ -72,68 +80,13 @@ export default function DestinationDetail() {
                             <MapPin className="h-4 w-4" />
                             <span>{destination.state}</span>
                         </div>
-                        {/* <div className="flex items-center gap-2 text-white/90">
-                            <Clock className="h-4 w-4" />
-                            <span>{destination.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-white/90">
-                            <Users className="h-4 w-4" />
-                            <span>{destination.groupSize}</span>
-                        </div> */}
+
                     </div>
-                    {/* Book Now Button */}
-                    {/* <Button
-                        variant="travel"
-                        size="lg"
-                        className="mb-8"
-                    >
-                        Book Now
-                    </Button> */}
                     <p className="text-xl text-white/90 max-w-2xl mx-auto">
                         Discover amazing destinations with our carefully crafted tour packages
                     </p>
                 </div>
             </section>
-            {/* Header */}
-            {/* <section className="py-8 border-b">
-        <div className="max-w-7xl mx-auto px-6">
-          
-          
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-              <div className="flex items-center gap-3 mb-2">
-                <h1 className="text-4xl font-bold text-foreground">{destination.name}</h1>
-                <Badge 
-                  variant="outline" 
-                  className={`${categoryColors[destination.category as keyof typeof categoryColors]} font-medium`}
-                >
-                  {destination.category}
-                </Badge>
-              </div>
-              
-              <div className="flex items-center gap-6 text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <MapPin className="h-4 w-4" />
-                  <span>{destination.location}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  <span>{destination.duration}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Users className="h-4 w-4" />
-                  <span>{destination.groupSize}</span>
-                </div>
-              </div>
-            </div>
-            
-            <Button variant="travel" size="lg">
-              Book Now
-            </Button>
-          </div>
-        </div>
-      </section> */}
-
             {/* Overview */}
             <section className="py-12">
                 <div className="max-w-7xl mx-auto px-6">
@@ -159,11 +112,6 @@ export default function DestinationDetail() {
                     </div>
                 </div>
             </section>
-
-
-
-
-
 
             {/* CTA Section */}
             <section className="py-16 bg-gradient-to-r from-travel-ocean to-travel-deep">

@@ -71,6 +71,7 @@ export const Navigation = () => {
             {/* Center - Main Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Home</Link>
+              <Link to="/destinations" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Destinations</Link>
               <Link to="/packages" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Our Packages</Link>
               <Link to="/travel" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Vehicles</Link>
               <Link to="/stay" className="text-white/90 hover:text-[#ffff00] transition-colors font-medium">Stays</Link>

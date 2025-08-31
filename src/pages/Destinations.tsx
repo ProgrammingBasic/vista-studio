@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Users, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, where, query } from "firebase/firestore";
 import { destinationRef } from "@/lib/database";
 
 
@@ -23,7 +23,8 @@ export default function Destinations() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const querySnapshot = await getDocs(destinationRef);
+                const q = query(destinationRef, where("isPublished", "==", true));
+                const querySnapshot = await getDocs(q);
                 const destinationData = querySnapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data(),
@@ -43,6 +44,10 @@ export default function Destinations() {
 
     if (loading) {
         return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    }
+
+    if (!destinations.length) {
+        return <div className="min-h-screen flex items-center justify-center">No destinations found.</div>;
     }
 
     return (
