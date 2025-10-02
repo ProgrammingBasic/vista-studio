@@ -50,7 +50,7 @@ export const Navigation = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <Mail className="w-3 h-3" />
-                <span>info@vistatravel.com</span>
+                <span>info@fareastexpedition.com</span>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Left Side - Logo/Brand */}
             <div className="text-2xl font-bold text-white">
-              Far East
+              FarEast Expedition
             </div>
             
             {/* Center - Main Menu */}

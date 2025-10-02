@@ -10,10 +10,11 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <iframe
           className="w-full h-full"
-          src="https://www.youtube.com/embed/q3eL0FUrlRs?si=W5-yb_PXRxGQYNtq&controls=0&autoplay=1&mute=1&loop=1&playlist=q3eL0FUrlRs&start=8&modestbranding=1&showinfo=0&rel=0"
+          src="https://www.youtube.com/embed/DkQocpE74TE?si=OPDrKIlmhgyajPwZ&autoplay=1&mute=1"
           title="YouTube video player"
           frameBorder="0"
-          allow="autoplay; encrypted-media"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           style={{
             position: "absolute",
@@ -59,55 +60,6 @@ export const Hero = () => {
             View All Packages
           </Button>
         </div>
-        {/* Booking Form */}
-        {/* <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-travel border border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-            <div className="space-y-2">
-              <label className="text-white/80 text-sm font-medium flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                Destination
-              </label>
-              <Input 
-                placeholder="Where to?" 
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-white/80 text-sm font-medium flex items-center gap-2">
-                <CalendarDays className="w-4 h-4" />
-                Check-in
-              </label>
-              <Input 
-                type="date" 
-                className="bg-white/20 border-white/30 text-white"
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-white/80 text-sm font-medium flex items-center gap-2">
-                <CalendarDays className="w-4 h-4" />
-                Check-out
-              </label>
-              <Input 
-                type="date" 
-                className="bg-white/20 border-white/30 text-white"
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-white/80 text-sm font-medium flex items-center gap-2">
-                <Users className="w-4 h-4" />
-                Guests
-              </label>
-              <Input 
-                type="number" 
-                placeholder="2" 
-                className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
-              />
-            </div>
-          </div>
-          <Button variant="hero" size="lg" className="w-full md:w-auto px-12 py-3 text-lg font-semibold">
-            Search Adventures
-          </Button>
-        </div> */}
       </div>
     </section>
   );

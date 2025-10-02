@@ -8,7 +8,7 @@ const destinations = [
 	{
 		id: 1,
 		name: "Trekking Tour",
-		image: "https://voysiri.in/wp-content/uploads/2022/12/yboTIPAis6.jpg",
+		image: "https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/08/Trekking-Cover-Photo-1-840x425.jpg",
 	},
 	{
 		id: 2,
