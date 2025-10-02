@@ -10,7 +10,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <iframe
           className="w-full h-full"
-          src="https://www.youtube.com/embed/DkQocpE74TE?si=OPDrKIlmhgyajPwZ&autoplay=1&mute=1"
+          src="https://www.youtube.com/embed/DkQocpE74TE?si=OPDrKIlmhgyajPwZ&autoplay=1&mute=1&loop=1&playlist=DkQocpE74TE"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
