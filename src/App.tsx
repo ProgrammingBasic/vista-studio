@@ -10,7 +10,7 @@ import Packages from "./pages/Packages";
 import PackageDetail from "./pages/PackageDetail";
 import CreatePlan from "./pages/CreatePlan";
 import NotFound from "./pages/NotFound";
-import { Navigation } from "./components/Navigation";
+import Navbar  from "./components/NewNavigation";
 import { Footer } from "./components/Footer";
 import Chatpage from "./pages/ChatPage";
 import Destinations from "./pages/Destinations";
@@ -24,7 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navigation/>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stay" element={<Stay />} />
