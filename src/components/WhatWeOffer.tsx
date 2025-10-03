@@ -1,31 +1,31 @@
 import { Card, CardContent } from "@/components/ui/card";
 // import { Route, Home, Package, FileText } from "lucide-react";
-import Route from '@/assets/icons/road-map.png'
-import Home from '@/assets/icons/home.png'
-import Package from '@/assets/icons/honeymoon.png'
-import FileText from '@/assets/icons/permit.png'
+import Documents from '@/assets/documents.png'
+import Home from '@/assets/tourism.png'
+import Package from '@/assets/house.png'
+import Bus from '@/assets/bus.png'
 
 const services = [
   {
-    icon: Route,
+    icon: Bus,
     title: "Transport Routes",
     description: "Comprehensive transportation solutions including scenic routes and tourist circuits across breathtaking destinations.",
     features: ["Self-drive vehicles", "Guided tours", "Scenic routes", "Safety assured"]
   },
   {
-    icon: Home,
+    icon: Package,
     title: "Housing & Homestays",
     description: "Comfortable accommodations ranging from luxury resorts to authentic local homestays for an immersive experience.",
     features: ["Luxury resorts", "Local homestays", "Camping sites", "Budget options"]
   },
   {
-    icon: Package,
+    icon: Home,
     title: "Tour Packages",
     description: "Carefully curated tour packages designed to showcase the best of each destination with expert local guides.",
     features: ["Customized itineraries", "Expert guides", "All-inclusive options", "Group discounts"]
   },
   {
-    icon: FileText,
+    icon: Documents,
     title: "Permits & Documentation",
     description: "Complete assistance with travel permits, documentation, and regulatory requirements for hassle-free journeys.",
     features: ["Travel permits", "Documentation help", "Visa assistance", "Legal compliance"]
@@ -53,11 +53,11 @@ export const WhatWeOffer = () => {
               className="group border-0 shadow-none"
             >
               <CardContent className="p-2 text-center">
-                <div className="w-40 h-40 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-40 h-40 mx-auto mb-6  flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {/* <service.icon className="h-8 w-8 text-white" /> */}
                   <img src={service.icon} alt="" className="w-20" />
                 </div>
-                <h3 className="text-xl font-semibold text-travel-ocean mb-4">
+                <h3 className="text-xl font-semibold tracking-wider mb-4">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">

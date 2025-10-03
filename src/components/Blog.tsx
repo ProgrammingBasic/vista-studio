@@ -27,13 +27,15 @@ const BlogRow = ({
         />
       </div>
       <div
-        className={`w-full md:w-1/2 flex items-center px-10 py-20 h-[320px] md:h-[480px] ${contentBg} ${
-          reverse ? "order-1" : ""
-        }`}
+        className={`w-full md:w-1/2 flex items-center px-10 py-20 h-[320px] md:h-[480px] ${contentBg} ${reverse ? "order-1" : ""
+          }`}
       >
         <div>
           <h2 className="text-4xl font-bold mb-4">{title}</h2>
           <p className="text-lg text-gray-700">{text}</p>
+          <button className="bg-yellow-300 hover:bg-yellow-400 text-sm mt-10 font-semibold px-6 py-2 rounded shadow">
+            Read More
+          </button>
         </div>
       </div>
     </div>

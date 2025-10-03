@@ -65,7 +65,7 @@ const vehicles = [
 const Travel = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
+  
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -229,7 +229,7 @@ const Travel = () => {
         </div>
       </section>
 
-      <Footer />
+
     </div>
   );
 };
