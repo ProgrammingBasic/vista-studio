@@ -47,7 +47,7 @@ const destinations = [
 
 function TopPlaceSlider() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerView = 5; // Show only three cards at a time
+    const itemsPerView = 4; // Show only three cards at a time
     const maxIndex = Math.max(0, destinations.length - itemsPerView);
 
     // Auto-loop logic
@@ -73,10 +73,10 @@ function TopPlaceSlider() {
 
     return (
         <section className="py-20 bg-white">
-			<div className="px-6">
+			<div className="max-w-[1600px] mx-auto px-4">
 				<div className="text-center mb-12">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						Places Travel
+						Destinations
 					</h2>
 					<div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
 					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -87,7 +87,7 @@ function TopPlaceSlider() {
 				<div className="relative">
 					<div className="overflow-hidden pt-3">
 						<div
-							className="flex transition-transform duration-500 ease-in-out gap-2"
+							className="flex transition-transform duration-500 ease-in-out gap-0"
 							style={{
 								transform: `translateX(-${
 									currentIndex * (100 / itemsPerView)
@@ -98,7 +98,8 @@ function TopPlaceSlider() {
 								<div
 									key={destination.id}
 									className="min-w-0 flex-shrink-0 mx-2"
-									style={{ width: `${100 / itemsPerView}%` }}
+									// style={{ width: `${100 / itemsPerView}%` }}
+									style={{ width: `24%` }} // Fixed width for 4 items per view
 								>
 									<Card className="group overflow-hidden border-4 border-transparent hover:border-4 hover:border-[#31b7d0] shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[30rem] rounded-none">
 										{/* Increased height from h-80 to h-[28rem] */}

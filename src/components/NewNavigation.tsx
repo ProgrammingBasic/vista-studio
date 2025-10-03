@@ -17,7 +17,7 @@ const Navbar = () => {
                     >
                         <path d="M12 2L2 7l10 5 10-5M2 12l10 5 10-5M2 7v5l10 5 10-5V7M2 12v5l10 5 10-5V12" />
                     </svg>
-                    <span className="text-white font-bold text-xl">DONG VALLEY</span>
+                    <span className="text-white font-bold text-2xl uppercase tracking-widest">Far East Expedition</span>
                 </div>
             </div>
 
