@@ -8,33 +8,33 @@ import {
     Play,
 } from 'lucide-react';
 
-import Cycle from '@/assets/icons/bicycle.png'
-import Hiking from '@/assets/icons/hiking.png'
-import Rafting from '@/assets/icons/rafting.png'
-import Talking from '@/assets/icons/talking.png'
+import Camera from '@/assets/camera.png'
+import Compass from '@/assets/compass.png'
+import Sailboat from '@/assets/sailboat.png'
+import Travel from '@/assets/travel.png'
 import { Link } from 'react-router-dom';
 import video from '@/assets/tribe.mp4'
 import { useState, useRef } from 'react';
 
 const activities = [
     {
-        icon: Cycle,
-        title: 'Cycling',
+        icon: Camera,
+        title: 'Travel Video',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
     {
-        icon: Hiking,
-        title: 'Mountain Trekking',
+        icon: Travel,
+        title: 'Free Brouchers',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
     {
-        icon: Rafting,
-        title: 'River Rafting',
+        icon: Sailboat,
+        title: 'Adventure Blog',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
     {
-        icon: Talking,
-        title: 'Meet The Locals',
+        icon: Compass,
+        title: 'Trip Selector',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
 ];
@@ -71,11 +71,11 @@ export default function ActivitiesSection() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
 
                 {activities.map((activity, index) => (
-                    <div key={index} className="space-y-4">
-                        <div className="w-40 h-40 mx-auto mb-6 bg-gradient-ocean rounded-full flex items-center justify-center text-white">      
+                    <div key={index} className="space-y-4 py-10 px-1">
+                        <div className="w-30 h-30 mx-auto mb-6 flex items-center justify-center text-white">      
                             <img src={activity.icon} alt={activity.title} className="w-20 h-20" />
                         </div>
-                        <h3 className="text-lg font-semibold tracking-wide">{activity.title}</h3>
+                        <h3 className="text-lg font-semibold tracking-wider">{activity.title}</h3>
                         <p className="text-sm text-gray-600">{activity.description}</p>
                         <Link
                             to="#"

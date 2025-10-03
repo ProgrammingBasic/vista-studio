@@ -9,31 +9,37 @@ const destinations = [
 		id: 1,
 		name: "Trekking Tour",
 		image: "https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/08/Trekking-Cover-Photo-1-840x425.jpg",
+		description: "Guided mountain treks through scenic trails, ideal for nature lovers and photographers seeking panoramic views.",
 	},
 	{
 		id: 2,
 		name: "Cycle Expedition",
 		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
+		description: "Challenging multi-day cycling routes that explore rural landscapes, cultural stops, and local cuisine experiences.",
 	},
 	{
 		id: 3,
 		name: "Hiking Festival",
 		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
+		description: "A community-driven event with guided hikes, workshops, and evening gatherings celebrating outdoor adventure.",
 	},
 	{
 		id: 4,
 		name: "Photography Fest",
 		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
+		description: "Immersive photography workshops at stunning locations with pro tips on composition, lighting, and editing.",
 	},
 	{
 		id: 5,
 		name: "Photography Fest",
 		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
+		description: "Curated photo walks that highlight urban and natural contrasts, perfect for hobbyists and pros alike.",
 	},
 	{
 		id: 6,
 		name: "Photography Fest",
 		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
+		description: "Hands-on sessions with model shoots, landscape techniques, and post-processing clinics for all levels.",
 	},
 	
 
@@ -94,7 +100,7 @@ function TopPlaceSlider() {
 									className="min-w-0 flex-shrink-0 mx-2"
 									style={{ width: `${100 / itemsPerView}%` }}
 								>
-									<Card className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[30rem]">
+									<Card className="group overflow-hidden border-4 border-transparent hover:border-4 hover:border-[#31b7d0] shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[30rem] rounded-none">
 										{/* Increased height from h-80 to h-[28rem] */}
 										<div className="relative h-full">
 											<img
@@ -107,6 +113,7 @@ function TopPlaceSlider() {
 												<h3 className="text-xl font-light text-[#31b7d0] group-hover:text-white ">
 													{destination.name}
 												</h3>
+												<p className='text-gray-500 text-sm py-4 group-hover:text-gray-200'>{destination.description}</p>
                         <p className="text-sm text-gray-300 font-semibold text-gray-600 group-hover:text-yellow-400" id="sub-text">Read More</p>
 											</div>
 										</div>
