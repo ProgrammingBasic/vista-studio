@@ -18,6 +18,7 @@ import ChatCTA from "@/components/ChatCta";
 import Why from "@/components/Why"
 import TopPlaceSlider from "@/components/TopPlaceSlider";
 import OurTeam from "@/components/OurTeam";
+import TravelGrid from "@/components/NewGrid";
 
 
 const Index = () => {
@@ -29,17 +30,18 @@ const Index = () => {
       <TopDestinationsSlider />
       <WhatWeDo />
       <TopPlaceSlider />
-      <Adventure />
+      {/* <Adventure /> */}
+      <TravelGrid/>
       <OurTeam />
       {/* <AboutCompany /> */}
       <WhatWeOffer />
       <TourPackages />
       <Accommodations />
-      <Why/>
+      {/* <Why/> */}
       <Blog/>
       {/* <ExperienceGallery /> */}
       {/* <WhyChooseUs /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CallToAction />
       {/* <TopDestinationsShowcase /> */}
 

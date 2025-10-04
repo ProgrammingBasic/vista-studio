@@ -15,6 +15,7 @@ import Travel from '@/assets/travel.png'
 import { Link } from 'react-router-dom';
 import video from '@/assets/tribe.mp4'
 import { useState, useRef } from 'react';
+import SectionTitle from './SectionTitle';
 
 const activities = [
     {
@@ -59,7 +60,7 @@ export default function ActivitiesSection() {
 
     return (
         <section className="py-20 px-4 bg-[#f1f9fc]">
-            <div className="text-center mb-16">
+            {/* <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
                     What We Do?
                 </h2>
@@ -67,7 +68,8 @@ export default function ActivitiesSection() {
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                     Comprehensive travel solutions designed to make your journey seamless and unforgettable
                 </p>
-            </div>
+            </div> */}
+            <SectionTitle title="What We Do?" subtitle="Comprehensive travel solutions designed to make your journey seamless and unforgettable" />
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
 
                 {activities.map((activity, index) => (

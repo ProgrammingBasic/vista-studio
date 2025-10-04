@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import SectionTitle from "./SectionTitle";
 
 const packages = [
 	{
@@ -65,16 +66,7 @@ export const TourPackages = () => {
 	return (
 		<section className="py-20 bg-[#f1f9fc]">
 			<div className="max-w-7xl mx-auto px-6">
-				<div className="text-center mb-16">
-					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						Our Top Destinations
-					</h2>
-					<div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
-					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-						Discover our specially crafted tour packages for unforgettable
-						adventures
-					</p>
-				</div>
+				<SectionTitle title="Tour Packages Destination" subtitle="Carefully curated tour packages designed to showcase the best of each destination with expert local guides." />
 
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{packages.map((pkg) => (

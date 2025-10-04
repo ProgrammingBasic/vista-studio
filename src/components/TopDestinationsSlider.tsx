@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
+import SectionTitle from "./SectionTitle";
 
 const destinations = [
 	{
@@ -57,15 +58,7 @@ export const TopDestinationsSlider = () => {
     return (
         <section className="py-20 bg-white">
 			<div className="container mx-auto px-6">
-				<div className="text-center mb-12">
-					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						Upcoming Events & Activities
-					</h2>
-					<div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
-					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-						Discover breathtaking locations waiting for your exploration
-					</p>
-				</div>
+				<SectionTitle title="Upcoming Events & Activities" subtitle="Discover breathtaking locations waiting for your exploration" />
 
 				<div className="relative">
 					<div className="overflow-hidden pt-3">

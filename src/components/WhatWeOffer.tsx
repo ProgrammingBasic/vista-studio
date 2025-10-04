@@ -4,6 +4,7 @@ import Documents from '@/assets/documents.png'
 import Home from '@/assets/tourism.png'
 import Package from '@/assets/house.png'
 import Bus from '@/assets/bus.png'
+import SectionTitle from "./SectionTitle";
 
 const services = [
   {
@@ -36,7 +37,7 @@ export const WhatWeOffer = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             What We Offer
           </h2>
@@ -44,7 +45,8 @@ export const WhatWeOffer = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive travel solutions designed to make your journey seamless and unforgettable
           </p>
-        </div>
+        </div> */}
+        <SectionTitle title="What We Offer" subtitle="Comprehensive travel solutions designed to make your journey seamless and unforgettable" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (

@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
+import SectionTitle from './SectionTitle';
 
 const destinations = [
 	{
@@ -41,67 +42,59 @@ const destinations = [
 		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
 		description: "Hands-on sessions with model shoots, landscape techniques, and post-processing clinics for all levels.",
 	},
-	
+
 
 ];
 
 function TopPlaceSlider() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerView = 4; // Show only three cards at a time
-    const maxIndex = Math.max(0, destinations.length - itemsPerView);
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const itemsPerView = 4; // Show only three cards at a time
+	const maxIndex = Math.max(0, destinations.length - itemsPerView);
 
-    // Auto-loop logic
-    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+	// Auto-loop logic
+	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    useEffect(() => {
-        intervalRef.current = setInterval(() => {
-            setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-        }, 3500); // Change slide every 3.5 seconds
+	useEffect(() => {
+		intervalRef.current = setInterval(() => {
+			setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+		}, 3500); // Change slide every 3.5 seconds
 
-        return () => {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        };
-    }, [maxIndex]);
+		return () => {
+			if (intervalRef.current) clearInterval(intervalRef.current);
+		};
+	}, [maxIndex]);
 
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    };
+	const nextSlide = () => {
+		setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+	};
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-    };
+	const prevSlide = () => {
+		setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+	};
 
-    return (
-        <section className="py-20 bg-white">
+	return (
+		<section className="py-20 bg-white">
 			<div className="max-w-[1600px] mx-auto px-4">
-				<div className="text-center mb-12">
-					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-						Destinations
-					</h2>
-					<div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
-					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-						Experts Insights and Advice
-					</p>
-				</div>
+				
+				<SectionTitle title="Destinations" subtitle='Discover breathtaking locations waiting for your exploration' />
 
 				<div className="relative">
 					<div className="overflow-hidden pt-3">
 						<div
 							className="flex transition-transform duration-500 ease-in-out gap-0"
 							style={{
-								transform: `translateX(-${
-									currentIndex * (100 / itemsPerView)
-								}%)`,
+								transform: `translateX(-${currentIndex * (100 / itemsPerView)
+									}%)`,
 							}}
 						>
 							{destinations.map((destination) => (
 								<div
 									key={destination.id}
-									className="min-w-0 flex-shrink-0 mx-2"
+									className="min-w-0 flex-shrink-0 mx-2 group"
 									// style={{ width: `${100 / itemsPerView}%` }}
 									style={{ width: `24%` }} // Fixed width for 4 items per view
 								>
-									<Card className="group overflow-hidden border-4 border-transparent hover:border-4 hover:border-[#31b7d0] shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[30rem] rounded-none">
+									<Card className="group overflow-hidden border-8 border-transparent hover:border-8 hover:border-[#31b7d0] shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[30rem] rounded-none">
 										{/* Increased height from h-80 to h-[28rem] */}
 										<div className="relative h-full">
 											<img
@@ -110,15 +103,16 @@ function TopPlaceSlider() {
 												className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
 											/>
 											<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-											<div className="absolute bottom-4 left-4 right-4 bg-white/90 p-6 text-center rounded-md group-hover:bg-[#31b7d0]">
-												<h3 className="text-xl font-light text-[#31b7d0] group-hover:text-white ">
+											<div className="absolute bottom-4 left-4 right-4 bg-white/90 p-8 text-center group-hover:bg-[#31b7d0]">
+												<h3 className="text-2xl font-light text-[#31b7d0] group-hover:text-white ">
 													{destination.name}
 												</h3>
 												<p className='text-gray-500 text-sm py-4 group-hover:text-gray-200'>{destination.description}</p>
-                        <p className="text-sm text-gray-300 font-semibold text-gray-600 group-hover:text-yellow-400" id="sub-text">Read More</p>
+												<p className="text-sm font-semibold text-gray-600 group-hover:text-yellow-400" id="sub-text">Read More</p>
 											</div>
 										</div>
 									</Card>
+									<div className='h-2 bg-yellow-300 w-[90%] mx-auto mt-2 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-center'></div>
 								</div>
 							))}
 						</div>

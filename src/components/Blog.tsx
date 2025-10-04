@@ -23,7 +23,7 @@ const BlogRow = ({
         <img
           src={imageSrc}
           alt={imageAlt}
-          className="object-cover w-full h-full rounded-lg"
+          className="object-cover w-full h-full "
         />
       </div>
       <div
@@ -32,9 +32,9 @@ const BlogRow = ({
       >
         <div>
           <h2 className="text-4xl font-bold mb-4">{title}</h2>
-          <p className="text-lg text-gray-700">{text}</p>
-          <button className="bg-yellow-300 hover:bg-yellow-400 text-sm mt-10 font-semibold px-6 py-2 rounded shadow">
-            Read More
+          <p className="text-lg text-gray-500">{text}</p>
+          <button className="bg-yellow-300 hover:bg-yellow-400 text-sm mt-10 font-semibold px-6 py-2 uppercase tracking-wider">
+            Get Tour Detail
           </button>
         </div>
       </div>
@@ -43,7 +43,7 @@ const BlogRow = ({
 );
 
 export const Blog = () => (
-  <div className="bg-white min-h-screen py-32">
+  <div className="bg-[#f1f9fc] min-h-screen py-32">
     <BlogRow
       imageSrc="https://images.pexels.com/photos/33207999/pexels-photo-33207999.jpeg"
       imageAlt="Cycling tour"

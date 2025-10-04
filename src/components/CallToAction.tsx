@@ -26,14 +26,14 @@ export const CallToAction = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
           <Button 
             size="lg" 
-            className="px-8 py-4 text-lg group bg-[#31b7d0] hover:bg-[#2a9bb0] text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="px-8 py-4 text-lg group rounded-none bg-[#31b7d0] hover:bg-[#2a9bb0] text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Book Your Tour Now
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button 
             size="lg" 
-            className="px-8 py-4 text-lg bg-[#ffff00] hover:bg-[#e6e600] text-black font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-[#ffff00]"
+            className="px-8 py-4 rounded-none text-lg bg-yellow-300 hover:bg-400 text-black font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-400"
           >
             View All Packages
           </Button>

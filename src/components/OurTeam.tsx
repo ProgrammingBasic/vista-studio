@@ -1,4 +1,5 @@
 import React from "react";
+import SectionTitle from "./SectionTitle";
 
 const members = [
     {
@@ -31,15 +32,8 @@ export default function OurTeam() {
     return (
         <section className="py-20 bg-gray-100 text-gray-800">
             <div className="max-w-6xl mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-                        Explore With The Team
-                    </h2>
-                    <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Experts Insights and Advice
-                    </p>
-                </div>
+                <SectionTitle title="Explore With The Team" subtitle="Experts Insights and Advice" />
+                
                 <div
                     role="list"
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center"

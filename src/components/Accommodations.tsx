@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import campingImage from "@/assets/camping.jpg";
 import hotelImage from "@/assets/hotel.jpg";
 import homestayImage from "@/assets/homestay.jpg";
+import SectionTitle from "./SectionTitle";
 
 const accommodations = [
   {
@@ -35,15 +36,8 @@ export const Accommodations = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Accommodations
-          </h2>
-          <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Find your perfect home away from home
-          </p>
-        </div>
+        
+        <SectionTitle title="Accommodations" subtitle="Find your perfect home away from home" />
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {accommodations.map((accommodation) => (
@@ -78,7 +72,7 @@ export const Accommodations = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="travel" size="lg" className="px-8">
+          <Button variant="travel" size="lg" className="px-8 bg-yellow-300 hover:bg-yellow-400 text-black uppercase tracking-wider">
             View All Stays
           </Button>
         </div>
