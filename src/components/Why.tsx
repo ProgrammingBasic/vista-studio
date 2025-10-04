@@ -87,7 +87,7 @@ function FarEast() {
 
     return (
         <section className="py-20 bg-[#f1f9fc]">
-            <div className="max-w-7xl mx-auto px-6">
+            {/* <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Why FarEast</h2>
                     <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
@@ -101,7 +101,7 @@ function FarEast() {
                         <div key={title} className="flex flex-col items-start gap-5 bg-white p-10 rounded-lg">
                             <div className="relative shrink-0">
                                 <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[#e6f7fb] text-[#31b7d0] shadow-sm">
-                                    {/* <Icon className="w-7 h-7" /> */}
+                                   
                                     <img src={Icon} alt="" className='w-16' />
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ function FarEast() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
             <div
                 id="sustainability"
                 className='relative z-0 bg-[#31b7d0] h-[1200px] w-full container mx-auto mt-20 rounded-lg py-20 mb-[360px] text-white'

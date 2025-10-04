@@ -37,7 +37,7 @@ const Index = () => {
       <WhatWeOffer />
       <TourPackages />
       <Accommodations />
-      {/* <Why/> */}
+      <Why/>
       <Blog/>
       {/* <ExperienceGallery /> */}
       {/* <WhyChooseUs /> */}
