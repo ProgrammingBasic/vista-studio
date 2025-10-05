@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -32,7 +33,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-2xl font-bold mb-4">Wanderlust</h4>
+              <h4 className="text-2xl font-bold mb-4">NorthEast Collective</h4>
               <p className="text-white/80 leading-relaxed">
                 Your gateway to extraordinary adventures. We curate unforgettable travel experiences 
                 with premium vehicles and handpicked accommodations.
@@ -56,17 +57,17 @@ export const Footer = () => {
             <h5 className="text-lg font-semibold mb-6">Services</h5>
             <ul className="space-y-3">
               {[
-                "Vehicle Rentals",
-                "Accommodation Booking", 
-                "Tour Packages",
-                "Travel Insurance",
-                "Travel Guides",
-                "24/7 Support"
-              ].map((service) => (
-                <li key={service}>
-                  <a href="#" className="text-white/80 hover:text-white transition-colors">
-                    {service}
-                  </a>
+                { name: "Vehicle Rentals", path: "/travel" },
+                { name: "Accommodation Booking", path: "/stay" },
+                { name: "Tour Packages", path: "/packages" },
+                { name: "Create Your Plan", path: "/create-plan" },
+                { name: "Travel Guides", path: "/destinations" },
+                { name: "24/7 Support", path: "/contact" }
+              ].map((service, index) => (
+                <li key={index}>
+                  <Link to={service.path} className="text-white/80 hover:text-white transition-colors">
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,17 +78,17 @@ export const Footer = () => {
             <h5 className="text-lg font-semibold mb-6">Destinations</h5>
             <ul className="space-y-3">
               {[
-                "Swiss Alps",
-                "Himalayan Regions",
-                "Coastal Roads",
-                "Desert Safaris",
-                "Nordic Countries",
-                "Tropical Islands"
-              ].map((destination) => (
-                <li key={destination}>
-                  <a href="#" className="text-white/80 hover:text-white transition-colors">
-                    {destination}
-                  </a>
+                { name: "Tawang", path: "/destination/tawang" },
+                { name: "Mechuka", path: "/destination/mechuka" },
+                { name: "Ziro", path: "/destination/ziro" },
+                { name: "Namsai", path: "/destination/namsai" },
+                { name: "Namdapha", path: "/destination/namdapha" },
+                { name: "All Destinations", path: "/destinations" }
+              ].map((destination, index) => (
+                <li key={index}>
+                  <Link to={destination.path} className="text-white/80 hover:text-white transition-colors">
+                    {destination.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,11 +99,11 @@ export const Footer = () => {
             <h5 className="text-lg font-semibold mb-6">Contact Us</h5>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-travel-teal" />
-                <span className="text-white/80">+1 (555) 123-4567</span>
+                <Phone className="w-5 h-5 text-yellow-300" />
+                <span className="text-white/80">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-travel-teal" />
+                <Mail className="w-5 h-5 text-yellow-300" />
                 <span className="text-white/80">hello@wanderlust.com</span>
               </div>
               <div className="flex items-start space-x-3">
@@ -122,18 +123,18 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">
-              © 2024 Wanderlust. All rights reserved.
+              © 2024 NorthEast Collective. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <Link to="/privacy" className="text-white/60 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              </Link>
+              <Link to="/terms" className="text-white/60 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              </Link>
+              <Link to="/cookies" className="text-white/60 hover:text-white transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
