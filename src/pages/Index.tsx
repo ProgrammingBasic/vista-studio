@@ -19,6 +19,7 @@ import Why from "@/components/Why"
 import TopPlaceSlider from "@/components/TopPlaceSlider";
 import OurTeam from "@/components/OurTeam";
 import TravelGrid from "@/components/NewGrid";
+import ThingsWeDo from "@/components/ThingsWeDo";
 
 
 const Index = () => {
@@ -31,7 +32,8 @@ const Index = () => {
       <WhatWeDo />
       <TopPlaceSlider />
       {/* <Adventure /> */}
-      <TravelGrid/>
+      {/* <TravelGrid/> */}
+      <ThingsWeDo/>
       <OurTeam />
       {/* <AboutCompany /> */}
       {/* <WhatWeOffer /> */}
