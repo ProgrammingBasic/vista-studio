@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-    const [activeTab, setActiveTab] = useState('HOME');
+    const location = useLocation();
 
-    const navItems = ['HOME', 'ADVENTURES', 'TOUR PACKAGES', 'GALLERY', 'ABOUT', 'CONTACT'];
+    const navItems = [
+        { name: 'HOME', url: '/' },
+        { name: 'DESTINATIONS', url: '/destinations' },
+        { name: 'SUSTAINABILITY', url: '/packages' },
+        // { name: 'VEHICLES', url: '/travel' },
+        { name: 'STAYS', url: '/stay' },
+        { name: 'CREATE YOUR PLAN', url: '/create-plan' },
+        { name: 'CONTACT', url: '/contact' }
+    ];
 
     return (
         <div className="w-full">
@@ -17,7 +26,7 @@ const Navbar = () => {
                     >
                         <path d="M12 2L2 7l10 5 10-5M2 12l10 5 10-5M2 7v5l10 5 10-5V7M2 12v5l10 5 10-5V12" />
                     </svg>
-                    <span className="text-white font-bold text-2xl uppercase tracking-widest">Far East Expedition</span>
+                    <span className="text-white font-bold text-2xl uppercase tracking-widest">NorthEast Collectives</span>
                 </div>
             </div>
 
@@ -25,16 +34,16 @@ const Navbar = () => {
             <nav className="bg-black text-white">
                 <ul className="flex justify-center space-x-1 leading-8">
                     {navItems.map((item) => (
-                        <li key={item}>
-                            <button
-                                onClick={() => setActiveTab(item)}
-                                className={`py-2 px-8 font-medium transition-colors duration-300 ${activeTab === item
+                        <li key={item.name}>
+                            <Link
+                                to={item.url}
+                                className={`py-2 px-8 font-medium transition-colors duration-300 block ${location.pathname === item.url
                                         ? 'bg-yellow-400 text-black'
                                         : 'hover:bg-gray-800'
                                     }`}
                             >
-                                {item}
-                            </button>
+                                {item.name}
+                            </Link>
                         </li>
                     ))}
                 </ul>

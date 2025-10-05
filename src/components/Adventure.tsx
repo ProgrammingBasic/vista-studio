@@ -49,7 +49,7 @@ export default function PostGrid() {
         <section className="bg-blue-50 py-40 px-4">
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 uppercase font-primary tracking-wide">
-                    Fun Activities to do
+                    Things We Do
                 </h2>
                 <div className="w-24 h-1 bg-gradient-ocean mx-auto mb-6 rounded-full"></div>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

@@ -48,7 +48,7 @@ const TravelGrid = () => {
     return (
         <section className='bg-blue-50 py-40 px-4'>
            
-            <SectionTitle title="Fun Activities to do" subtitle="Comprehensive travel solutions designed to make your journey seamless and unforgettable" />
+            <SectionTitle title="Things We Do" subtitle="Comprehensive travel solutions designed to make your journey seamless and unforgettable" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-7xl mx-auto p-4 h-[60rem]">
                 {posts.map((post, idx) => (
                     <div key={idx} className={`relative overflow-hidden border-4 border-transparent hover:border-4 hover:border-[#31b7d0] group ${post.cols || ''}`}>

@@ -76,7 +76,7 @@ function TopPlaceSlider() {
 		<section className="py-20 bg-white">
 			<div className="max-w-[1600px] mx-auto px-4">
 				
-				<SectionTitle title="Destinations" subtitle='Discover breathtaking locations waiting for your exploration' />
+				<SectionTitle title="Highlights & Activities" subtitle='Discover breathtaking locations waiting for your exploration' />
 
 				<div className="relative">
 					<div className="overflow-hidden pt-3">

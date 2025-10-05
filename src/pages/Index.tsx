@@ -34,7 +34,7 @@ const Index = () => {
       <TravelGrid/>
       <OurTeam />
       {/* <AboutCompany /> */}
-      <WhatWeOffer />
+      {/* <WhatWeOffer /> */}
       <TourPackages />
       <Accommodations />
       <Why/>

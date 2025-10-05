@@ -12,6 +12,10 @@ import Camera from '@/assets/camera.png'
 import Compass from '@/assets/compass.png'
 import Sailboat from '@/assets/sailboat.png'
 import Travel from '@/assets/travel.png'
+import Documents from '@/assets/documents.png'
+import Home from '@/assets/tourism.png'
+import Package from '@/assets/house.png'
+import Bus from '@/assets/bus.png'
 import { Link } from 'react-router-dom';
 import video from '@/assets/tribe.mp4'
 import { useState, useRef } from 'react';
@@ -38,6 +42,29 @@ const activities = [
         title: 'Trip Selector',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
     },
+    {
+        icon: Bus,
+        title: "Transport Routes",
+        description: "Comprehensive transportation solutions including scenic routes across breathtaking destinations.",
+
+    },
+    {
+        icon: Package,
+        title: "Housing & Homestays",
+        description: "Comfortable accommodations ranging from luxury resorts to authentic local homestays for an immersive experience.",
+
+    },
+    {
+        icon: Home,
+        title: "Tour Packages",
+        description: "Carefully curated tour packages designed to showcase the best of each destination with expert local guides.",
+
+    },
+    {
+        icon: Documents,
+        title: "Permits & Documentation",
+        description: "Complete assistance with travel permits, documentation, and regulatory requirements for hassle-free journeys.",
+    }
 ];
 
 export default function ActivitiesSection() {
@@ -74,7 +101,7 @@ export default function ActivitiesSection() {
 
                 {activities.map((activity, index) => (
                     <div key={index} className="space-y-4 py-10 px-1">
-                        <div className="w-30 h-30 mx-auto mb-6 flex items-center justify-center text-white">      
+                        <div className="w-30 h-30 mx-auto mb-6 flex items-center justify-center text-white">
                             <img src={activity.icon} alt={activity.title} className="w-20 h-20" />
                         </div>
                         <h3 className="text-lg font-semibold tracking-wider">{activity.title}</h3>
@@ -117,6 +144,6 @@ export default function ActivitiesSection() {
                 </div>
             </div> */}
         </section>
-        
+
     );
 }

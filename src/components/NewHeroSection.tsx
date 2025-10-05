@@ -1,4 +1,6 @@
 import React from 'react';
+import { BotMessageSquare, NotebookPen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     return (
@@ -28,9 +30,16 @@ const HeroSection = () => {
                     </p>
 
                     {/* Call to Action Button */}
-                    <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded transition-colors duration-300">
-                        START YOUR JOURNEY
-                    </button>
+                    <div className='space-x-4 flex justify-center'>
+                        <Link to="/chat" className=" flex bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded transition-colors duration-300 uppercase">
+                            <BotMessageSquare className='mr-2'/>
+                            Start Chatting
+                        </Link>
+                        <Link to="/create-plan" className="flex bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded transition-colors duration-300 uppercase">
+                            <NotebookPen className='mr-2'/>
+                            Plan your Journey
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
