@@ -15,6 +15,9 @@ import { Footer } from "./components/Footer";
 import Chatpage from "./pages/ChatPage";
 import Destinations from "./pages/Destinations";
 import DestinationDetail from "./pages/DestinationDetail";
+import Contact from "./pages/Contact";
+import DestinationByState from "./pages/DestinationByState";
+import DestinationSearchByState from "./pages/DestinationSearchByState";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +38,9 @@ const App = () => (
           <Route path="/destination/:slug" element={<DestinationDetail />} />
           <Route path="/create-plan" element={<CreatePlan />} />
           <Route path="/chat" element={<Chatpage />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/state" element={<DestinationByState />} />
+          <Route path="/destinations/state/:slug" element={<DestinationSearchByState />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

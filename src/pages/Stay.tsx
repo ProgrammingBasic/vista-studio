@@ -108,7 +108,7 @@ const Stay = () => {
 
       {/* Accommodations Section */}
       <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Choose Your Stay
@@ -125,7 +125,7 @@ const Stay = () => {
               return (
                 <Card 
                   key={accommodation.id}
-                  className="group border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 overflow-hidden"
+                  className="group border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 overflow-hidden rounded-none"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img 
@@ -153,7 +153,7 @@ const Stay = () => {
                       <DialogTrigger asChild>
                         <Button 
                           variant="travel" 
-                          className="w-full group-hover:scale-105 transition-transform duration-300"
+                          className="w-full group-hover:scale-105 transition-transform duration-300 rounded-none hover:text-yellow-300"
                         >
                           Book Now
                         </Button>

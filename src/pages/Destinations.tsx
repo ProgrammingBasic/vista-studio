@@ -91,7 +91,7 @@ export default function Destinations() {
                         {destinations.map((item) => (
                             <Card
                                 key={item.id}
-                                className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-2"
+                                className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-2 rounded-none"
                             >
                                 <div className="relative h-64 overflow-hidden">
                                     <img
@@ -137,7 +137,7 @@ export default function Destinations() {
 
                                     <Button
                                         variant="travel"
-                                        className="w-full group-hover:scale-105 transition-transform duration-300"
+                                        className="w-full group-hover:scale-105 transition-transform duration-300 text-white hover:text-yellow-300 rounded-none"
                                         onClick={() => navigate(`/destination/${item.slug}`)}
                                     >
                                         More Info

@@ -9,7 +9,7 @@ const Navbar = () => {
         { name: 'DESTINATIONS', url: '/destinations' },
         { name: 'SUSTAINABILITY', url: '/packages' },
         // { name: 'VEHICLES', url: '/travel' },
-        { name: 'STAYS', url: '/stay' },
+        { name: 'ACCOMADATIONS', url: '/stay' },
         { name: 'CREATE YOUR PLAN', url: '/create-plan' },
         { name: 'CONTACT', url: '/contact' }
     ];

@@ -62,7 +62,8 @@ export const Footer = () => {
                 { name: "Tour Packages", path: "/packages" },
                 { name: "Create Your Plan", path: "/create-plan" },
                 { name: "Travel Guides", path: "/destinations" },
-                { name: "24/7 Support", path: "/contact" }
+                { name: "24/7 Support", path: "/contact" },
+                { name: "State Wise Destinations", path: "/state" }
               ].map((service, index) => (
                 <li key={index}>
                   <Link to={service.path} className="text-white/80 hover:text-white transition-colors">

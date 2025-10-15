@@ -115,21 +115,21 @@ const TravelGrid = () => {
         <section className='bg-blue-50 py-20 px-4'>
             <SectionTitle title="Things We Do" subtitle="Comprehensive travel solutions designed to make your journey seamless and unforgettable" />
             <Tabs defaultValue="cycling" className="max-w-7xl mx-auto">
-                <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-2xl mx-auto mb-8">
+                <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-2xl mx-auto mb-8 bg-white">
                     <TabsTrigger value="cycling" className="group">
-                        <Bike className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-600" />
+                        <Bike className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-400" />
                         Cycling
                     </TabsTrigger>
                     <TabsTrigger value="hiking" className="group">
-                        <Mountain className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-600" />
+                        <Mountain className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-400" />
                         Hiking
                     </TabsTrigger>
                     <TabsTrigger value="sustainability" className="group">
-                        <Leaf className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-600" />
+                        <Leaf className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-400" />
                         Sustainability
                     </TabsTrigger>
                     <TabsTrigger value="adventure" className="group">
-                        <Compass className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-600" />
+                        <Compass className="mr-2 h-4 w-4 transition-colors group-data-[state=active]:text-teal-400" />
                         Adventure
                     </TabsTrigger>
                 </TabsList>
