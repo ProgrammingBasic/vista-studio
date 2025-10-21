@@ -7,10 +7,10 @@ const Navbar = () => {
     const navItems = [
         { name: 'HOME', url: '/' },
         { name: 'DESTINATIONS', url: '/destinations' },
-        { name: 'SUSTAINABILITY', url: '/packages' },
+        { name: 'EXPERIENCE', url: '/packages' },
         // { name: 'VEHICLES', url: '/travel' },
-        { name: 'ACCOMADATIONS', url: '/stay' },
-        { name: 'CREATE YOUR PLAN', url: '/create-plan' },
+        { name: 'STAY', url: '/stay' },
+        { name: 'RIDE & RENTALS', url: '/travel' },
         { name: 'CONTACT', url: '/contact' }
     ];
 
