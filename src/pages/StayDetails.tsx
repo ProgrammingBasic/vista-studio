@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Wifi, Car, Coffee, Dog, Clock, Mountain, MapPin, Phone, Mail, MessageSquare } from 'lucide-react'
+import { getDocs, limit, query, where } from 'firebase/firestore';
+import { accomodationRef } from '@/lib/database';
+import { useParams } from 'react-router-dom';
 
 
 
@@ -22,6 +25,40 @@ const facilities = [
 ];
 
 function StayDetails() {
+    const { slug } = useParams()
+    const [accommodation, setAccommodation] = useState<any | null>(null)
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const fetchAccommodation = async () => {
+            setLoading(true)
+            try {
+                const q = query(accomodationRef, where("slug", "==", slug), limit(1))
+                const querySnapshot = await getDocs(q)
+
+                if (!querySnapshot.empty) {
+                    const doc = querySnapshot.docs[0]
+                    const data = { id: doc.id, ...doc.data() }
+                    console.log(data)
+                    setAccommodation(data)
+                } else {
+                    console.warn("No accommodation found for slug:", slug)
+                    setAccommodation(null)
+                }
+            } catch (error) {
+                console.error("Error fetching accommodation:", error)
+            } finally {
+                setLoading(false)
+            }
+        }
+
+        if (slug) fetchAccommodation()
+    }, [slug])
+
+    if (loading) return <p>Loading...</p>
+    if (!accommodation) return <p>No accommodation found</p>
+
+
     return (
         <div className="min-h-screen bg-background">
             {/* Hero Section */}

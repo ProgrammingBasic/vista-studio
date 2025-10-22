@@ -5,3 +5,4 @@ export const db = getFirestore(app)
 
 
 export const destinationRef = collection(db, "Destinations")
+export const accomodationRef = collection(db, "Accomodations")
