@@ -15,19 +15,37 @@ const menu = [
     { name: 'Rules/Notes', href: '#notes', current: false },
 ]
 
-const facilities = [
-    { name: 'Free Wi-Fi', icon: Wifi },
-    { name: 'Free Parking', icon: Car },
-    { name: 'Breakfast Included', icon: Coffee },
-    { name: 'Pet Friendly', icon: Dog },
-    { name: '24/7 Check-in', icon: Clock },
-    { name: 'Mountain View', icon: Mountain },
-];
+// const facilities = [
+//     { name: 'Free Wi-Fi', icon: Wifi },
+//     { name: 'Free Parking', icon: Car },
+//     { name: 'Breakfast Included', icon: Coffee },
+//     { name: 'Pet Friendly', icon: Dog },
+//     { name: '24/7 Check-in', icon: Clock },
+//     { name: 'Mountain View', icon: Mountain },
+// ];
+
+
+const iconMap = {
+    Wifi,
+    Car,
+    Coffee,
+    Dog,
+    Clock,
+    Mountain
+}
+
 
 function StayDetails() {
     const { slug } = useParams()
     const [accommodation, setAccommodation] = useState<any | null>(null)
     const [loading, setLoading] = useState(true)
+
+
+    function IconRenderer({ name, className, strokeWidth = 1.5 }) {
+        const Icon = iconMap[name];
+        if (!Icon) return <span className="h-8 w-8 text-gray-400">?</span>;
+        return <Icon className={className} strokeWidth={strokeWidth} />;
+    }
 
     useEffect(() => {
         const fetchAccommodation = async () => {
@@ -74,7 +92,7 @@ function StayDetails() {
 
                 <div className="relative max-w-4xl mx-auto px-6 text-center z-10">
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Stay Details
+                        {accommodation.name}
                     </h1>
                     <p className="text-lg text-white/90 max-w-2xl mx-auto">
                         Find out more about your chosen accommodation.
@@ -122,10 +140,11 @@ function StayDetails() {
                                 <p className='text-gray-500 text-lg mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aperiam.</p>
                             </div>
                             <div className='grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-10'>
-                                {facilities.map((facility) => (
+                                {accommodation.facilities.map((facility) => (
                                     <div key={facility.name} className='flex items-center gap-4'>
-                                        <facility.icon className='h-8 w-8 text-primary' strokeWidth={1.5} />
-                                        <span className='text-lg text-foreground'>{facility.name}</span>
+                                        {/* <facility.icon className='h-8 w-8 text-primary' strokeWidth={1.5} /> */}
+                                        <IconRenderer name={facility.iconName} className="h-8 w-8 text-primary" />
+                                        <span className='text-lg text-foreground'>{facility.label}</span>
                                     </div>
                                 ))}
                             </div>
@@ -208,3 +227,5 @@ function StayDetails() {
     )
 }
 export default StayDetails
+
+
