@@ -10,6 +10,7 @@ const Navbar = () => {
         { name: 'EXPERIENCE', url: '/packages' },
         // { name: 'VEHICLES', url: '/travel' },
         { name: 'STAY', url: '/stay' },
+        { name: 'ACCOMMODATIONS', url: '/stay/list' },
         { name: 'RIDE & RENTALS', url: '/travel' },
         { name: 'CONTACT', url: '/contact' }
     ];
