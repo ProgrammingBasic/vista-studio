@@ -123,14 +123,19 @@ function StayDetails() {
                                 About The Stay
                             </h2>
                             <p className='leading-10'>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia in quaerat quas sed incidunt eos ducimus laboriosam illo iusto debitis pariatur, quo modi, eveniet officiis rem porro facere quod ullam. Nam aliquid vitae iusto sint non explicabo unde! Magnam qui voluptatum, aspernatur commodi quas distinctio corporis velit nisi, officia omnis nam assumenda reprehenderit est a corrupti dolorem rem. Fuga porro natus sit quasi pariatur repellat, labore sequi inventore molestiae minus eos adipisci nesciunt vitae, culpa delectus nostrum, tenetur aut illo dolore praesentium ducimus? Inventore quae velit labore cum, architecto eum alias perspiciatis libero maiores? Reiciendis hic consectetur sapiente corrupti voluptates.
+                                {accommodation.description}
                             </p>
                         </div>
                         <div className='grid grid-cols-2' id='gallery'>
-                            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop" alt="Gallery Image 1" className='w-full h-auto object-cover' />
+                            {
+                                accommodation.images.map((imageUrl, index) => (
+                                <img key={index} src={imageUrl.url} alt={`Gallery Image ${index + 1}`} className='w-full h-auto object-cover' />
+                                ))
+                            }
+                            {/* <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop" alt="Gallery Image 1" className='w-full h-auto object-cover' />
                             <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&h=600&fit=crop" alt="Gallery Image 2" className='w-full h-auto object-cover' />
                             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop" alt="Gallery Image 3" className='w-full h-auto object-cover' />
-                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop" alt="Gallery Image 4" className='w-full h-auto object-cover' />
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop" alt="Gallery Image 4" className='w-full h-auto object-cover' /> */}
                         </div>
                         <div id='facilities' className='py-20'>
                             <div className='mb-10'>
@@ -174,12 +179,12 @@ function StayDetails() {
                                         <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                                         <div>
                                             <h4 className="font-semibold">Address</h4>
-                                            <p className="text-muted-foreground">123 Mountain View Road, Serene Valley, Himachal Pradesh, 171001</p>
+                                            <p className="text-muted-foreground">{accommodation.location.address}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-4">
                                         <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                                        <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">+91 987 654 3210</a>
+                                        <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">{accommodation.host.contact}</a>
                                     </div>
                                     <div className="flex items-center gap-4">
                                         <Mail className="h-5 w-5 text-primary flex-shrink-0" />
@@ -191,7 +196,8 @@ function StayDetails() {
                         <div className='border border-blue-500 rounded-md py-20 px-10 mb-20' id='notes'>
                             <div className="mb-10">
                                 <h2 className='text-5xl'>House Rules/Notes</h2>
-                                <p className='text-gray-500 text-lg mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aperiam.</p>
+                                <p className='mb-5 text-gray-500 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, in.</p>
+                                <p className='text-gray-500 text-lg mt-4'>{accommodation.notes}</p>
                             </div>
                         </div>
                     </div>
@@ -200,19 +206,19 @@ function StayDetails() {
                             <div className="bg-[#f1f9fc] rounded-lg shadow-md p-8">
                                 <div className="flex flex-col items-center text-center">
                                     <img
-                                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=200&h=200&fit=crop&crop=faces"
+                                        src={accommodation.host.image.url}
                                         alt="Host"
                                         className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mb-4"
                                     />
-                                    <h3 className="text-2xl font-bold text-foreground mb-1">John Doe</h3>
+                                    <h3 className="text-2xl font-bold text-foreground mb-1">{accommodation.host.name}</h3>
                                     <p className="text-muted-foreground mb-6">Your Host</p>
 
                                     <div className="w-full space-y-4 text-left">
                                         <a href="tel:+919876543210" className="flex items-center gap-4 p-3 bg-white rounded-lg shadow-sm hover:bg-gray-50 transition-colors">
                                             <Phone className="h-6 w-6 text-primary" />
-                                            <span className="text-muted-foreground">+91 987 654 3210</span>
+                                            <span className="text-muted-foreground">{accommodation.host.contact}</span>
                                         </a>
-                                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-3 bg-white rounded-lg shadow-sm hover:bg-gray-50 transition-colors">
+                                        <a href={`https://wa.me/${accommodation.host.contact}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-3 bg-white rounded-lg shadow-sm hover:bg-gray-50 transition-colors">
                                             <MessageSquare className="h-6 w-6 text-green-500" />
                                             <span className="text-muted-foreground">Chat on WhatsApp</span>
                                         </a>
