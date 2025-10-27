@@ -129,7 +129,7 @@ function StayDetails() {
                         <div className='grid grid-cols-2' id='gallery'>
                             {
                                 accommodation.images.map((imageUrl, index) => (
-                                <img key={index} src={imageUrl.url} alt={`Gallery Image ${index + 1}`} className='w-full h-auto object-cover' />
+                                    <img key={index} src={imageUrl.url} alt={`Gallery Image ${index + 1}`} className='w-full h-auto object-cover' />
                                 ))
                             }
                             {/* <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop" alt="Gallery Image 1" className='w-full h-auto object-cover' />
@@ -193,11 +193,17 @@ function StayDetails() {
                                 </div>
                             </div>
                         </div>
-                        <div className='border border-blue-500 rounded-md py-20 px-10 mb-20' id='notes'>
+                        <div className='border-4 border-[#31b7d0] rounded-md py-10 px-10 mb-20' id='notes'>
                             <div className="mb-10">
                                 <h2 className='text-5xl'>House Rules/Notes</h2>
                                 <p className='mb-5 text-gray-500 mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, in.</p>
-                                <p className='text-gray-500 text-lg mt-4'>{accommodation.notes}</p>
+
+
+                                <div
+                                    className="prose max-w-none mb-10 text-foreground wysiwyg"
+                                    dangerouslySetInnerHTML={{ __html: accommodation?.notes || "" }}
+                                />
+
                             </div>
                         </div>
                     </div>
