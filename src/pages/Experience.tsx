@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionTitle from '@/components/SectionTitle';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const experiences = [
     {
@@ -9,7 +10,8 @@ const experiences = [
         description: "Dive deep into the heart of Northeast India. Our cultural immersion experiences allow you to live with local communities, participate in their daily lives, and understand their unique traditions and customs firsthand.",
         image: "https://images.unsplash.com/photo-1759738103333-1c836a32f848?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
         imageAlt: "A person participating in a local cultural ceremony.",
-        reverse: false
+        reverse: false,
+        slug: "cultural-immersion"
     },
     {
         title: "Adventure & Trekking",
@@ -17,7 +19,8 @@ const experiences = [
         description: "For the thrill-seekers, we offer a range of adventure activities from high-altitude treks in the Himalayas to river rafting in roaring rivers. Challenge yourself and witness landscapes that will take your breath away.",
         image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
         imageAlt: "A group of trekkers on a mountain path.",
-        reverse: true
+        reverse: true,
+        slug: "adventure-trekking"
     }
 ];
 
@@ -43,7 +46,7 @@ function Experience() {
 
             <section className='py-20'>
                 <div>
-                    <SectionTitle title="YOU LIKE TO TRAVEL" subtitle="FUN ACTIVITIES TO TRY IN NORTHEAST INDIA" />     
+                    <SectionTitle title="YOU LIKE TO TRAVEL" subtitle="FUN ACTIVITIES TO TRY IN NORTHEAST INDIA" />
                 </div>
                 <div className='container mx-auto space-y-16'>
                     {experiences.map((exp, index) => (
@@ -63,9 +66,11 @@ function Experience() {
                                 <p className="text-muted-foreground leading-relaxed mb-6">
                                     {exp.description}
                                 </p>
-                                <Button variant="travel" size="lg" className='border-none px-10 bg-yellow-300 text-black uppercase rounded-none shadow-none hover:bg-yellow-400 transition-colors duration-200'>
-                                    Read More
-                                </Button>
+                               <Link to={`/experiences/${exp.slug}`}>
+                                    <Button variant="travel" size="lg" className='border-none px-10 bg-yellow-300 text-black uppercase rounded-none shadow-none hover:bg-yellow-400 transition-colors duration-200'>
+                                        Read More
+                                    </Button>
+                               </Link>
                             </div>
                         </div>
                     ))}
