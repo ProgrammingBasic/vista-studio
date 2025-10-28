@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
+import SectionTitle from '@/components/SectionTitle'
 
 function About() {
     return (
@@ -101,9 +102,11 @@ function About() {
 
             <section>
                 <div className="container mx-auto mb-20 bg-gray-200 p-20 rounded-md">
-                    <div className='text-center mb-10'>
-                        <h2 className='md:text-4xl font-bold tracking-wider'>WHAT YOU'LL LEARN HERE</h2>
-                        <p className='text-primary'>EXPERT INSIGHT AND ADVICE</p>
+                    <div className='text-center'>
+                    <SectionTitle title="WHAT YOU'LL LEARN HERE" subtitle="EXPERT INSIGHT AND ADVICE" /> 
+
+                        {/* <h2 className='md:text-4xl font-bold tracking-wider'>WHAT YOU'LL LEARN HERE</h2> */}
+                        {/* <p className='text-primary'>EXPERT INSIGHT AND ADVICE</p> */}
                     </div>
                     <div>
                         <p className="text-muted-foreground mb-8 leading-relaxed">Dong Experience is one of the many projects that Discover FarEast has curated and executed that pledges to bring development into this remote corner. Dong and surrounding areas are in dire need of basic facilities like Better Schools, better transport and opportunities of employment. Dong Experience shall attract tremendous publicity, which shall right away bring a rise in the current state of Tourism Sector here.</p>
@@ -146,6 +149,7 @@ function About() {
             </section>
             <section>
                 <div className="max-w-6xl mx-auto px-6 mb-20 text-center">
+                    {/* <SectionTitle title="WANT TO WORK WITH US?" subtitle="Connect With Us" />  */}
                     <h2 className="text-4xl md:text-4xl uppercase font-bold text-foreground mb-6 leading-tight">
                         Want to work with us?
                     </h2>
