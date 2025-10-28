@@ -12,7 +12,8 @@ const Navbar = () => {
         { name: 'STAY', url: '/stay' },
         { name: 'ACCOMMODATIONS', url: '/stay/list' },
         { name: 'RIDE & RENTALS', url: '/travel' },
-        { name: 'CONTACT', url: '/contact' }
+        { name: 'CONTACT', url: '/contact' },
+        { name: 'WHY FAREAST', url: '/about' }
     ];
 
     return (

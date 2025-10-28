@@ -161,6 +161,10 @@ All colors MUST be HSL.
   p {
     font-family: 'Merriweather', serif;
   }
+
+  ul>li{
+    font-family: 'Merriweather', serif;
+  }
 }
 
 .hero-gradient {
