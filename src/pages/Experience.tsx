@@ -29,7 +29,7 @@ function Experience() {
             <section className="relative overflow-hidden h-[40vh] flex items-center justify-center">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop" // Placeholder image of a team
+                        src="https://plus.unsplash.com/premium_photo-1664910633795-a678f61a8aad?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" // Placeholder image of a team
                         alt="About Us Hero"
                         className="w-full h-full object-cover"
                     />
