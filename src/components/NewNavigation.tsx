@@ -7,7 +7,7 @@ const Navbar = () => {
     const navItems = [
         { name: 'HOME', url: '/' },
         { name: 'DESTINATIONS', url: '/destinations' },
-        { name: 'EXPERIENCE', url: '/packages' },
+        { name: 'EXPERIENCE', url: '/experiences' },
         // { name: 'VEHICLES', url: '/travel' },
         { name: 'STAY', url: '/stay' },
         { name: 'ACCOMMODATIONS', url: '/stay/list' },

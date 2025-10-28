@@ -21,6 +21,7 @@ import DestinationSearchByState from "./pages/DestinationSearchByState";
 import StayDetails from "./pages/StayDetails";
 import Staylist from "./pages/Staylist";
 import About from "./pages/About";
+import Experience from "./pages/Experience";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/stay/:slug" element={<StayDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/stay/list" element={<Staylist />} />
+          <Route path="/experiences" element={<Experience />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
