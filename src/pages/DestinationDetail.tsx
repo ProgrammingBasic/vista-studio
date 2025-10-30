@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, MapPin, Clock, Users, CheckCircle, Camera, Mountain, Utensils, Car, Plane, Train, Sun, CloudRain, Snowflake, CalendarDays, Phone, MessageSquare, Facebook, Instagram, Twitter, User } from "lucide-react";
+import { ArrowLeft, MapPin, Clock, Users, CheckCircle, Camera, Mountain, Utensils, Car, Plane, Train, Sun, CloudRain, Snowflake, CalendarDays, Phone, MessageSquare, Facebook, Instagram, Twitter, User, BusFront } from "lucide-react";
 import { destinationRef } from "@/lib/database";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -11,46 +11,46 @@ import PageImageGallery from "@/components/PageImageGallery";
 import PageAccomodation from "./PageAccomodation";
 
 const images = [
-  {
-    url: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg",
-    alt: "Beautiful mountain landscape with clouds",
-  },
-  {
-    url: "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg",
-    alt: "City skyline at sunset with skyscrapers",
-  },
-  {
-    url: "https://images.pexels.com/photos/372166/pexels-photo-372166.jpeg",
-    alt: "Traveler standing on a cliff overlooking the ocean",
-  },
-  {
-    url: "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg",
-    alt: "Close-up of purple flower with dew drops",
-  },
-  {
-    url: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
-    alt: "Tropical beach with palm trees and blue sky",
-  },
-  {
-    url: "https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg",
-    alt: "Night sky full of stars over forest",
-  },
-  {
-    url: "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg",
-    alt: "Aerial view of winding river through green fields",
-  },
-  {
-    url: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
-    alt: "Modern minimalist living room interior",
-  },
-  {
-    url: "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg",
-    alt: "Group of friends hiking on a mountain trail",
-  },
-  {
-    url: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg",
-    alt: "Delicious breakfast on wooden table",
-  },
+    {
+        url: "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg",
+        alt: "Beautiful mountain landscape with clouds",
+    },
+    {
+        url: "https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg",
+        alt: "City skyline at sunset with skyscrapers",
+    },
+    {
+        url: "https://images.pexels.com/photos/372166/pexels-photo-372166.jpeg",
+        alt: "Traveler standing on a cliff overlooking the ocean",
+    },
+    {
+        url: "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg",
+        alt: "Close-up of purple flower with dew drops",
+    },
+    {
+        url: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
+        alt: "Tropical beach with palm trees and blue sky",
+    },
+    {
+        url: "https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg",
+        alt: "Night sky full of stars over forest",
+    },
+    {
+        url: "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg",
+        alt: "Aerial view of winding river through green fields",
+    },
+    {
+        url: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+        alt: "Modern minimalist living room interior",
+    },
+    {
+        url: "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg",
+        alt: "Group of friends hiking on a mountain trail",
+    },
+    {
+        url: "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg",
+        alt: "Delicious breakfast on wooden table",
+    },
 ];
 
 
@@ -61,6 +61,11 @@ const categoryColors = {
     Nature: "bg-green-500/10 text-green-600 border-green-500/30"
 };
 
+const transportIcons = {
+    flight: Plane,
+    train: Train,
+    road: Car,
+};
 export default function DestinationDetail() {
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -78,6 +83,7 @@ export default function DestinationDetail() {
                     const doc = querySnapshot.docs[0];
                     const data = doc.data();
                     if (typeof data === "object" && data !== null) {
+                        console.log("Fetched document data:", data);
                         setDestination({ id: doc.id, ...data });
                     } else {
                         setDestination({ id: doc.id });
@@ -153,7 +159,7 @@ export default function DestinationDetail() {
                         dangerouslySetInnerHTML={{ __html: destination?.content || "" }}
                     />
 
-                    <PageImageGallery images={images}/>
+                    <PageImageGallery images={images} />
 
 
                     {/* Image Gallery */}
@@ -187,33 +193,22 @@ export default function DestinationDetail() {
                                         <MapPin className="h-6 w-6 text-travel-ocean" /> How to Reach
                                     </h3>
                                     <ul className="space-y-6">
-                                        <li className="flex items-start gap-4">
-                                            <div className="bg-travel-ocean/10 rounded-full p-3 mt-1">
-                                                <Plane className="h-5 w-5 text-travel-ocean" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-lg">By Air</h4>
-                                                <p className="text-muted-foreground text-sm">The nearest major airport is Lokpriya Gopinath Bordoloi International Airport (GAU) in Guwahati, about 480 km away. You can hire a taxi or take a bus from there.</p>
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-4">
-                                            <div className="bg-travel-ocean/10 rounded-full p-3 mt-1">
-                                                <Train className="h-5 w-5 text-travel-ocean" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-lg">By Rail</h4>
-                                                <p className="text-muted-foreground text-sm">Tezpur Railway Station (TZTB) is the closest railhead, approximately 385 km from Tawang. Taxis and buses are available for the onward journey.</p>
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-4">
-                                            <div className="bg-travel-ocean/10 rounded-full p-3 mt-1">
-                                                <Car className="h-5 w-5 text-travel-ocean" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-semibold text-lg">By Road</h4>
-                                                <p className="text-muted-foreground text-sm">The road trip to Tawang is scenic but challenging. It's well-connected by road from Tezpur and Guwahati. Shared sumos and private taxis are common.</p>
-                                            </div>
-                                        </li>
+                                        {
+                                            Object.entries(destination.howToReach || {}).map(([mode, details]) => {
+                                                const IconComponent = transportIcons[mode.toLowerCase() as keyof typeof transportIcons] || Plane; // Default to Plane if mode not found
+                                                return (
+                                                <li key={mode} className="flex items-start gap-4">
+                                                    <div className="bg-travel-ocean/10 rounded-full p-3 mt-1">
+                                                        <IconComponent className="h-5 w-5 text-travel-ocean" />
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="font-semibold text-lg capitalize">By {mode}</h4>
+                                                        <p className="text-muted-foreground text-sm">{details}.</p>
+                                                    </div>
+                                                </li>
+
+                                            )})
+                                        }
                                     </ul>
                                 </CardContent>
                             </Card>
@@ -265,8 +260,8 @@ export default function DestinationDetail() {
             </section>
 
             <div className="h-[2px] w-[90%] bg-gray-300 rounded-lg max-w-6xl mx-auto px-6 my-20"></div>
-            
-            <PageAccomodation/>
+
+            <PageAccomodation />
 
             {/* CTA Section */}
             <section className="py-16 bg-gradient-to-r from-travel-ocean to-travel-deep mt-20">
