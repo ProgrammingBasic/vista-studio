@@ -5,51 +5,67 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import SectionTitle from './SectionTitle';
 
-const destinations = [
-	{
-		id: 1,
-		name: "Trekking Tour",
-		image: "https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/08/Trekking-Cover-Photo-1-840x425.jpg",
-		description: "Guided mountain treks through scenic trails, ideal for nature lovers and photographers seeking panoramic views.",
-	},
-	{
-		id: 2,
-		name: "Cycle Expedition",
-		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
-		description: "Challenging multi-day cycling routes that explore rural landscapes, cultural stops, and local cuisine experiences.",
-	},
-	{
-		id: 3,
-		name: "Hiking Festival",
-		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
-		description: "A community-driven event with guided hikes, workshops, and evening gatherings celebrating outdoor adventure.",
-	},
-	{
-		id: 4,
-		name: "Photography Fest",
-		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
-		description: "Immersive photography workshops at stunning locations with pro tips on composition, lighting, and editing.",
-	},
-	{
-		id: 5,
-		name: "Photography Fest",
-		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
-		description: "Curated photo walks that highlight urban and natural contrasts, perfect for hobbyists and pros alike.",
-	},
-	{
-		id: 6,
-		name: "Photography Fest",
-		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
-		description: "Hands-on sessions with model shoots, landscape techniques, and post-processing clinics for all levels.",
-	},
+import { getFeaturedDestinations } from '@/api/destination'
+import { Link } from 'react-router-dom';
+
+// const destinations = [
+// 	{
+// 		id: 1,
+// 		name: "Trekking Tour",
+// 		image: "https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/08/Trekking-Cover-Photo-1-840x425.jpg",
+// 		description: "Guided mountain treks through scenic trails, ideal for nature lovers and photographers seeking panoramic views.",
+// 	},
+// 	{
+// 		id: 2,
+// 		name: "Cycle Expedition",
+// 		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
+// 		description: "Challenging multi-day cycling routes that explore rural landscapes, cultural stops, and local cuisine experiences.",
+// 	},
+// 	{
+// 		id: 3,
+// 		name: "Hiking Festival",
+// 		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
+// 		description: "A community-driven event with guided hikes, workshops, and evening gatherings celebrating outdoor adventure.",
+// 	},
+// 	{
+// 		id: 4,
+// 		name: "Photography Fest",
+// 		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
+// 		description: "Immersive photography workshops at stunning locations with pro tips on composition, lighting, and editing.",
+// 	},
+// 	{
+// 		id: 5,
+// 		name: "Photography Fest",
+// 		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
+// 		description: "Curated photo walks that highlight urban and natural contrasts, perfect for hobbyists and pros alike.",
+// 	},
+// 	{
+// 		id: 6,
+// 		name: "Photography Fest",
+// 		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
+// 		description: "Hands-on sessions with model shoots, landscape techniques, and post-processing clinics for all levels.",
+// 	},
 
 
-];
+// ];
 
 function TopPlaceSlider() {
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const [destinations, setDestinations] = useState<any>([]);
 	const itemsPerView = 4; // Show only three cards at a time
 	const maxIndex = Math.max(0, destinations.length - itemsPerView);
+
+
+	useEffect(() => {
+		const fetchDestinations = async () => {
+			const data = await getFeaturedDestinations();
+			setDestinations(data);
+		};
+
+		fetchDestinations();
+	}, []);
+
+
 
 	// Auto-loop logic
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -75,7 +91,7 @@ function TopPlaceSlider() {
 	return (
 		<section className="py-20 bg-white">
 			<div className="max-w-[1600px] mx-auto px-4">
-				
+
 				<SectionTitle title="Highlights & Activities" subtitle='Discover breathtaking locations waiting for your exploration' />
 
 				<div className="relative">
@@ -98,17 +114,23 @@ function TopPlaceSlider() {
 										{/* Increased height from h-80 to h-[28rem] */}
 										<div className="relative h-full">
 											<img
-												src={destination.image}
+												src={destination.images[0].url}
 												alt={destination.name}
 												className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
 											/>
 											<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 											<div className="absolute bottom-4 left-4 right-4 bg-white/90 p-8 text-center group-hover:bg-[#31b7d0]">
 												<h3 className="text-2xl font-light text-[#31b7d0] group-hover:text-white ">
-													{destination.name}
+													{destination.title}
 												</h3>
-												<p className='text-gray-500 text-sm py-4 group-hover:text-gray-200'>{destination.description}</p>
-												<p className="text-sm font-semibold text-gray-600 group-hover:text-yellow-400" id="sub-text">Read More</p>
+												<p className='text-gray-500 text-sm py-4 group-hover:text-gray-200 line-clamp-2'>{destination.description}</p>
+												<Link
+													to={`/destination/${destination.slug}`}
+													className="text-sm font-semibold text-gray-600 hover:text-yellow-400 transition-colors duration-300"
+													id="sub-text"
+												>
+													Read More
+												</Link>
 											</div>
 										</div>
 									</Card>

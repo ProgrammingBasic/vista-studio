@@ -178,3 +178,21 @@ All colors MUST be HSL.
 .wysiwyg h3 {
   @apply text-2xl font-semibold;
 }
+
+.wysiwyg a {
+  @apply text-teal-500 hover:text-teal-600 underline;
+}
+
+.wysiwyg blockquote {
+  @apply border-l-4 border-accent pl-4 italic text-accent-foreground;
+}
+
+.wysiwyg ul {
+  @apply list-disc list-inside space-y-2 text-primary;
+  font-family: 'Merriweather', serif;
+}
+
+.wysiwyg ol {
+  @apply list-decimal list-inside space-y-2 ;
+  font-family: 'Merriweather', serif;
+}
