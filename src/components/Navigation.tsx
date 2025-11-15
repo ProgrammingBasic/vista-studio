@@ -65,7 +65,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between">
             {/* Left Side - Logo/Brand */}
             <div className="text-2xl font-bold text-white">
-              FarEast Expedition
+            North East Sustainable Tourism - NEST
             </div>
             
             {/* Center - Main Menu */}

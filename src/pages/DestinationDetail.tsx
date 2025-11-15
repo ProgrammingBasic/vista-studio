@@ -197,17 +197,18 @@ export default function DestinationDetail() {
                                             Object.entries(destination.howToReach || {}).map(([mode, details]) => {
                                                 const IconComponent = transportIcons[mode.toLowerCase() as keyof typeof transportIcons] || Plane; // Default to Plane if mode not found
                                                 return (
-                                                <li key={mode} className="flex items-start gap-4">
-                                                    <div className="bg-travel-ocean/10 rounded-full p-3 mt-1">
-                                                        <IconComponent className="h-5 w-5 text-travel-ocean" />
-                                                    </div>
-                                                    <div>
-                                                        <h4 className="font-semibold text-lg capitalize">By {mode}</h4>
-                                                        <p className="text-muted-foreground text-sm">{details}.</p>
-                                                    </div>
-                                                </li>
+                                                    <li key={mode} className="flex items-start gap-4">
+                                                        <div className="bg-travel-ocean/10 rounded-full p-3 mt-1">
+                                                            <IconComponent className="h-5 w-5 text-travel-ocean" />
+                                                        </div>
+                                                        <div>
+                                                            <h4 className="font-semibold text-lg capitalize">By {mode}</h4>
+                                                            <p className="text-muted-foreground text-sm">{details}.</p>
+                                                        </div>
+                                                    </li>
 
-                                            )})
+                                                )
+                                            })
                                         }
                                     </ul>
                                 </CardContent>

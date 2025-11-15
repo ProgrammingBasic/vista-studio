@@ -33,7 +33,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-2xl font-bold mb-4">NorthEast Collective</h4>
+              <h4 className="text-2xl font-bold mb-4">North East Sustainable Tourism - NEST</h4>
               <p className="text-white/80 leading-relaxed">
                 Your gateway to extraordinary adventures. We curate unforgettable travel experiences 
                 with premium vehicles and handpicked accommodations.
@@ -124,7 +124,7 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">
-              © 2024 NorthEast Collective. All rights reserved.
+              © 2025 North East Sustainable Tourism - NEST. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-white/60 hover:text-white transition-colors">

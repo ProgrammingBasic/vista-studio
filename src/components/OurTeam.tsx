@@ -1,30 +1,35 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
+import Team1 from "@/assets/team/team1.jpg";
+import Team2 from "@/assets/team/team2.jpg";
+import Team3 from "@/assets/team/team3.jpg";
+import Team5 from "@/assets/team/team5.jpg";
+
 
 const members = [
     {
         id: 1,
-        name: "John Doe",
+        name: "Dina Brah",
         role: "Author, Adventures",
-        img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=1",
+        img: Team1,
     },
     {
         id: 2,
-        name: "Emma Smith",
+        name: "Agraj Mipun",
         role: "Adviser, Photographer",
-        img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=2",
+        img: Team2,
     },
     {
         id: 3,
-        name: "Alex Brown",
+        name: "Joyshree Gogoi",
         role: "Photographer",
-        img: "https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=",
+        img: Team3,
     },
     {
         id: 4,
-        name: "Lily Johnson",
+        name: "Maqsood Ahmed",
         role: "Adviser, Adventures",
-        img: "https://images.unsplash.com/photo-1524503033411-c9566986fc8f?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=4",
+        img: Team5
     },
 ];
 

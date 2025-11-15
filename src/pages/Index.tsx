@@ -20,6 +20,8 @@ import TopPlaceSlider from "@/components/TopPlaceSlider";
 import OurTeam from "@/components/OurTeam";
 import TravelGrid from "@/components/NewGrid";
 import ThingsWeDo from "@/components/ThingsWeDo";
+import Gallery from "@/components/Gallery";
+
 
 
 const Index = () => {
@@ -35,6 +37,8 @@ const Index = () => {
       {/* <TravelGrid/> */}
       <ThingsWeDo/>
       <OurTeam />
+      <Gallery />
+      {/* <TopDestinationsSlider /> */}
       {/* <AboutCompany /> */}
       {/* <WhatWeOffer /> */}
       <TourPackages />
