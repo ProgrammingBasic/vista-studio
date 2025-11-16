@@ -142,13 +142,15 @@ function FarEast() {
 
                     <div className="relative w-full max-w-6xl mx-auto mt-8">
                         <video
-                            src="https://videos.pexels.com/video-files/33314972/14188194_2560_1440_30fps.mp4"
                             className="w-full rounded-lg border-8 border-primary"
                             controls
-                            poster="/images/video-poster.jpg"
+                            poster="/video-poster.jpg"
                             ref={videoRef}
                             onPlay={handleVideoPlay}
-                        ></video>
+                        >
+                           <source src="https://www.pexels.com/download/video/28444617/" type="video/mp4" />
+                           Your browser does not support the video tag.
+                        </video>
 
                         {!isPlaying && (
                             <button
@@ -163,7 +165,7 @@ function FarEast() {
                             </button>
                         )}
                     </div>
-                    <p className="mt-10 max-w-6xl mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, laboriosam reprehenderit ipsum voluptates exercitationem hic tempore consectetur repellendus vero quam, cum dolores nulla voluptate sed? Odit unde minima praesentium quas cumque odio, ratione nisi, explicabo sequi maiores commodi velit. Harum consequatur fuga nam cum, odio corrupti est? Provident, sapiente dicta.</p>
+                    <p className="mt-10 max-w-6xl mx-auto">Our commitment extends beyond showcasing the stunning landscapes of NorthEast India. We are dedicated to responsible tourism that empowers local communities and preserves the natural environment for generations to come. We actively partner with local experts and communities to drive sustainable initiatives. These projects are fundamental to our mission, ensuring that every journey with us contributes positively to the region and its inhabitants.</p>
                     <h3 className="mt-10 text-4xl">Our Ongoing Projects</h3>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4 z-10 relative absolute -bottom-[2rem]'>
