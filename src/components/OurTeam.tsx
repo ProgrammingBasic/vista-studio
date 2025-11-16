@@ -1,27 +1,26 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
-import Team1 from "@/assets/team/team1.jpg";
-import Team2 from "@/assets/team/team2.jpg";
-import Team3 from "@/assets/team/team3.jpg";
-import Team5 from "@/assets/team/team5.jpg";
-import Team6 from "@/assets/team/team6.jpg";
-import Team7 from "@/assets/team/team7.jpg";
-import Team8 from "@/assets/team/team8.jpg";
+import Team13 from "@/assets/team/t13.jpg";
+import Team16 from "@/assets/team/t16.jpg";
+import Team11 from "@/assets/team/t11.jpg";
+import Team5 from "@/assets/team/t5.jpg";
+
+
 
 
 
 const members = [
     {
         id: 1,
-        name: "Dina Brah",
-        role: "Author, Adventures",
-        img: Team1,
+        name: "Sameer",
+        role: "Sikkim",
+        img: Team13,
     },
     {
         id: 2,
-        name: "Tahaj Hussain",
-        role: "Adviser, Photographer",
-        img: Team8,
+        name: "Subradip",
+        role: "Tripura",
+        img: Team16,
     },
     // {
     //     id: 3,
@@ -31,15 +30,15 @@ const members = [
     // },
     {
         id: 4,
-        name: "Martsuba",
-        role: "Adviser, Adventures",
-        img: Team6
+        name: "Rudrangshu",
+        role: "Assam",
+        img: Team11
     },
     {
         id: 4,
-        name: "Taju Pujen",
-        role: "Adviser, Adventures",
-        img: Team7
+        name: "Gitartha",
+        role: "Assam",
+        img: Team5
     },
 ];
 
@@ -70,11 +69,11 @@ export default function OurTeam() {
                     ))}
                 </div>
 
-                <div className="flex justify-center mt-8">
+                {/* <div className="flex justify-center mt-8">
                     <button className="bg-yellow-300 hover:bg-yellow-400 text-sm font-semibold px-6 py-2 rounded shadow">
                         VIEW ALL EXPERTS
                     </button>
-                </div>
+                </div> */}
             </div>
         </section>
     );
