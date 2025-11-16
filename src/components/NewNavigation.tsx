@@ -13,7 +13,8 @@ const Navbar = () => {
         // { name: 'ACCOMMODATIONS', url: '/stay/list' },
         { name: 'TRANSPORT', url: '/travel' },
         { name: 'CONTACT', url: '/contact' },
-        { name: 'WHY FAREAST', url: '/about' }
+        { name: 'MEDIA & BLOGS', url: '/media-blogs' },
+        { name: 'PLAN MY TRIP', url: '/create-plan' }
     ];
 
     return (
