@@ -35,7 +35,7 @@ const members = [
         img: Team11
     },
     {
-        id: 4,
+        id: 5,
         name: "Gitartha",
         role: "Assam",
         img: Team5
@@ -58,7 +58,7 @@ export default function OurTeam() {
                                 <img
                                     src={m.img}
                                     alt={`${m.name} avatar`}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover object-top"
                                 />
                             </div>
                             <div className="mt-4 font-semibold text-gray-900">
