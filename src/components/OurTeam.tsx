@@ -6,6 +6,7 @@ import Team3 from "@/assets/team/team3.jpg";
 import Team5 from "@/assets/team/team5.jpg";
 import Team6 from "@/assets/team/team6.jpg";
 import Team7 from "@/assets/team/team7.jpg";
+import Team8 from "@/assets/team/team8.jpg";
 
 
 
@@ -18,9 +19,9 @@ const members = [
     },
     {
         id: 2,
-        name: "Agraj Mipun",
+        name: "Tahaj Hussain",
         role: "Adviser, Photographer",
-        img: Team2,
+        img: Team8,
     },
     // {
     //     id: 3,
