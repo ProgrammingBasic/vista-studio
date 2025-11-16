@@ -143,9 +143,9 @@ function FarEast() {
                     <div className="relative w-full max-w-6xl mx-auto mt-8">
                         <video
                             src="https://videos.pexels.com/video-files/33314972/14188194_2560_1440_30fps.mp4"
-                            className="w-full rounded-lg border border-8 border-primary"
+                            className="w-full rounded-lg border-8 border-primary"
                             controls
-                            // poster="/images/video-poster.jpg"
+                            poster="/images/video-poster.jpg"
                             ref={videoRef}
                             onPlay={handleVideoPlay}
                         ></video>

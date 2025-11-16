@@ -1,9 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import campingImage from "@/assets/camping.jpg";
-import hotelImage from "@/assets/hotel.jpg";
-import homestayImage from "@/assets/homestay.jpg";
 import SectionTitle from "./SectionTitle";
+import { Link } from "react-router-dom";
 
 const accommodations = [
   {
@@ -72,9 +70,11 @@ export const Accommodations = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button variant="travel" size="lg" className="px-8 bg-yellow-300 hover:bg-yellow-400 text-black uppercase tracking-wider">
-            View All Stays
-          </Button>
+          <Link to="/stay">
+            <Button variant="travel" size="lg" className="px-8 bg-yellow-300 hover:bg-yellow-400 text-black uppercase tracking-wider">
+              View All Stays
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -3,109 +3,131 @@ import SectionTitle from './SectionTitle';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Bike, Mountain, Leaf, Compass } from 'lucide-react';
 
+import Image1 from "@/assets/tabs/1.jpg"
+import Image2 from "@/assets/tabs/2.jpg"
+import Image3 from "@/assets/tabs/3.jpg"
+import Image4 from "@/assets/tabs/4.jpg"
+import Image5 from "@/assets/tabs/5.jpg"
+import Image6 from "@/assets/tabs/6.jpg"
+import Image7 from "@/assets/tabs/7.jpg"
+import Image8 from "@/assets/tabs/8.jpg"
+import Image9 from "@/assets/tabs/9.jpg"
+import Adv1 from "@/assets/tabs/A1.jpg"
+import Adv2 from "@/assets/tabs/A2.jpg"
+import Adv3 from "@/assets/tabs/A3.jpg"
+import Adv4 from "@/assets/tabs/A4.jpg"
+import Adv5 from "@/assets/tabs/A5.jpg"
+import s1 from "@/assets/tabs/s1.jpg"
+import s2 from "@/assets/tabs/s2.jpg"
+import s3 from "@/assets/tabs/s3.jpg"
+import s4 from "@/assets/tabs/s4.jpg"
+import s5 from "@/assets/tabs/s5.jpg"
+
+
+
 const tabData = {
     cycling: [
         {
             title: "Mountain Biking",
-            image: "https://images.pexels.com/photos/1149601/pexels-photo-1149601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image3,
         },
         {
             title: "Road Cycling",
-            image: "https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image2,
         },
         {
             title: "City Ride",
-            image: "https://images.pexels.com/photos/38296/cycling-bicycle-riding-sport-38296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image5,
         },
         {
             title: "Gravel Path",
-            image: "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s2
         },
         {
             title: "Downhill Race",
-            image: "https://images.pexels.com/photos/248559/pexels-photo-248559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image7
         },
         {
             title: "BMX Tricks",
-            image: "https://images.pexels.com/photos/3621234/pexels-photo-3621234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image8
         },
     ],
     hiking: [
         {
             title: "Forest Trail",
-            image: "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image8
         },
         {
             title: "Mountain Peak",
-            image: "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: "https://www.swantour.com/blogs/wp-content/uploads/2019/01/How-to-Reach-North-East-India.jpg",
         },
         {
             title: "Coastal Walk",
-            image: "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: "https://static.wixstatic.com/media/11062b_65a97671b8d64580af34a8cd40a55e40~mv2.jpeg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_65a97671b8d64580af34a8cd40a55e40~mv2.jpeg",
         },
         {
             title: "Desert Trek",
-            image: "https://images.pexels.com/photos/992734/pexels-photo-992734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: "https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2021/12/North-East-India-Trekking.jpg?resize=800%2C517&ssl=1",
         },
         {
             title: "Waterfall Discovery",
-            image: "https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: "https://media1.thrillophilia.com/filestore/9vo5a62jnvrpkkswa81cy7oo556k_1623305706_moderate_trek.png?w=400&dpr=2",
         },
         {
             title: "Winter Expedition",
-            image: "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: "https://unconventionalandvivid.com/wp-content/uploads/2018/07/IMG_5629-01-1024x682.jpeg",
         },
     ],
     sustainability: [
         {
             title: "Eco-friendly Stay",
-            image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s1,
         },
         {
             title: "Community Work",
-            image: "https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s2,
         },
         {
             title: "Renewable Energy",
-            image: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s3,
         },
         {
             title: "Local Farming",
-            image: "https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s4,
         },
         {
             title: "Wildlife Conservation",
-            image: "https://images.pexels.com/photos/1484771/pexels-photo-1484771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s5,
         },
         {
             title: "Tree Planting",
-            image: "https://images.pexels.com/photos/41951/solar-system-solar-energy-power-generation-41951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Image8,
         },
     ],
     adventure: [
         {
             title: "River Rafting",
-            image: "https://images.pexels.com/photos/1687831/pexels-photo-1687831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Adv1,
         },
         {
             title: "Paragliding",
-            image: "https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Adv2,
         },
         {
             title: "Kayaking",
-            image: "https://images.pexels.com/photos/2409038/pexels-photo-2409038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Adv3,
         },
         {
             title: "Rock Climbing",
-            image: "https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Adv4,
         },
         {
             title: "Zip Lining",
-            image: "https://images.pexels.com/photos/347141/pexels-photo-347141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: Adv5,
         },
         {
             title: "Scuba Diving",
-            image: "https://images.pexels.com/photos/1268076/pexels-photo-1268076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: s4,
         },
     ],
 };
@@ -144,9 +166,9 @@ const TravelGrid = () => {
                                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    {/* <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                                         <h3 className="text-xl md:text-2xl font-bold">{post.title}</h3>
-                                    </div>
+                                    </div> */}
                                 </div>
                             ))}
                         </div>

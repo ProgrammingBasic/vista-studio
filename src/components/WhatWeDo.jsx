@@ -25,22 +25,22 @@ const activities = [
     {
         icon: Camera,
         title: 'Travel Video',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
+        description: 'Watch stunning travel videos that capture the essence of our destinations, inspiring your next adventure.',
     },
     {
         icon: Travel,
-        title: 'Free Brouchers',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
+        title: 'Free Brochures',
+        description: 'Download our detailed and free brochures to help you plan your perfect getaway with ease.',
     },
     {
         icon: Sailboat,
         title: 'Adventure Blog',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
+        description: 'Read our adventure blog for exciting travel stories, tips, and guides from our team of explorers.',
     },
     {
         icon: Compass,
         title: 'Trip Selector',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ratione.',
+        description: 'Use our interactive trip selector to find the perfect journey tailored to your interests and travel style.',
     },
     {
         icon: Bus,

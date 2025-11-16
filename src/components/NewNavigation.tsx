@@ -10,8 +10,8 @@ const Navbar = () => {
         { name: 'EXPERIENCE', url: '/experiences' },
         // { name: 'VEHICLES', url: '/travel' },
         { name: 'STAY', url: '/stay' },
-        { name: 'ACCOMMODATIONS', url: '/stay/list' },
-        { name: 'RIDE & RENTALS', url: '/travel' },
+        // { name: 'ACCOMMODATIONS', url: '/stay/list' },
+        { name: 'TRANSPORT', url: '/travel' },
         { name: 'CONTACT', url: '/contact' },
         { name: 'WHY FAREAST', url: '/about' }
     ];
@@ -29,7 +29,7 @@ const Navbar = () => {
                         <path d="M12 2L2 7l10 5 10-5M2 12l10 5 10-5M2 7v5l10 5 10-5V7M2 12v5l10 5 10-5V12" />
                     </svg>
                     <span className="text-white font-bold text-2xl uppercase tracking-widest">North East Sustainable Tourism
-                    NEST</span>
+                    (NEST)</span>
                 </div>
             </div>
 

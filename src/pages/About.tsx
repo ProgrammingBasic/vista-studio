@@ -9,7 +9,7 @@ function About() {
             <section className="relative overflow-hidden h-[40vh] flex items-center justify-center">
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop" // Placeholder image of a team
+                        src="https://www.japjitravel.com/blog/wp-content/uploads/2020/03/North-East-India-Tour-Packages-from-Delhi.webp" // Placeholder image of a team
                         alt="About Us Hero"
                         className="w-full h-full object-cover"
                     />

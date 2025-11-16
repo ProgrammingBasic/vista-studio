@@ -4,6 +4,9 @@ import Team1 from "@/assets/team/team1.jpg";
 import Team2 from "@/assets/team/team2.jpg";
 import Team3 from "@/assets/team/team3.jpg";
 import Team5 from "@/assets/team/team5.jpg";
+import Team6 from "@/assets/team/team6.jpg";
+import Team7 from "@/assets/team/team7.jpg";
+
 
 
 const members = [
@@ -19,17 +22,23 @@ const members = [
         role: "Adviser, Photographer",
         img: Team2,
     },
+    // {
+    //     id: 3,
+    //     name: "Joyshree Gogoi",
+    //     role: "Photographer",
+    //     img: Team3,
+    // },
     {
-        id: 3,
-        name: "Joyshree Gogoi",
-        role: "Photographer",
-        img: Team3,
+        id: 4,
+        name: "Martsuba",
+        role: "Adviser, Adventures",
+        img: Team6
     },
     {
         id: 4,
-        name: "Maqsood Ahmed",
+        name: "Taju Pujen",
         role: "Adviser, Adventures",
-        img: Team5
+        img: Team7
     },
 ];
 

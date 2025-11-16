@@ -5,7 +5,7 @@ import Slider1 from '@/assets/gallery/slider1.jpg';
 import Slider2 from '@/assets/gallery/slider2.jpg';
 
 const Gallery = () => {
-  const galleryImages = [Slider1, Slider2];
+  const galleryImages = [Slider2, Slider1];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
