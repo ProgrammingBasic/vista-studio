@@ -96,7 +96,7 @@ export default function ActivitiesSection() {
                     Comprehensive travel solutions designed to make your journey seamless and unforgettable
                 </p>
             </div> */}
-            <SectionTitle title="What We Do?" subtitle="Comprehensive travel solutions designed to make your journey seamless and unforgettable" />
+            <SectionTitle title="Our Services" subtitle="Discover all the ways we help you create unforgettable travel experiences." />
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
 
                 {activities.map((activity, index) => (
