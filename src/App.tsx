@@ -23,6 +23,7 @@ import Staylist from "./pages/Staylist";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import ExperienceDetails from "./pages/ExperienceDetails";
+import OurStories from "./pages/Media";
 
 const queryClient = new QueryClient();
 
@@ -47,10 +48,11 @@ const App = () => (
           <Route path="/state" element={<DestinationByState />} />
           <Route path="/destinations/state/:slug" element={<DestinationSearchByState />} />
           <Route path="/stay/:slug" element={<StayDetails />} />
-          <Route path="/media-blogs" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/stay/list" element={<Staylist />} />
           <Route path="/experiences" element={<Experience />} />
           <Route path="/experiences/:slug" element={<ExperienceDetails />} />
+          <Route path="/our-stories" element={<OurStories/>}/>
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

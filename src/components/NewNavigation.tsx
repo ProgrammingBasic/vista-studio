@@ -13,8 +13,8 @@ const Navbar = () => {
         // { name: 'ACCOMMODATIONS', url: '/stay/list' },
         { name: 'TRANSPORT', url: '/travel' },
         { name: 'CONTACT', url: '/contact' },
-        { name: 'MEDIA & BLOGS', url: '/media-blogs' },
-        { name: 'PLAN MY TRIP', url: '/create-plan' }
+        { name: 'OUR STORIES', url: '/our-stories' }
+        // { name: 'PLAN MY TRIP', url: '/create-plan' }
     ];
 
     return (

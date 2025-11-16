@@ -17,7 +17,7 @@ function About() {
                 </div>
 
                 <div className="relative text-center z-10">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white">Media & Blogs</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold text-white">About Us</h1>
                 </div>
             </section>
             <section className="py-20">

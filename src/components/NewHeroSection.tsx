@@ -30,16 +30,16 @@ const HeroSection = () => {
                     </p>
 
                     {/* Call to Action Button */}
-                    {/* <div className='space-x-4 flex justify-center'>
-                        <Link to="/chat" className=" flex bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded transition-colors duration-300 uppercase">
+                    <div className='space-x-4 flex justify-center'>
+                        {/* <Link to="/chat" className=" flex bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded transition-colors duration-300 uppercase">
                             <BotMessageSquare className='mr-2'/>
                             Start Chatting
-                        </Link>
+                        </Link> */}
                         <Link to="/create-plan" className="flex bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded transition-colors duration-300 uppercase">
                             <NotebookPen className='mr-2'/>
-                            Plan your Journey
+                            Plan My Trip
                         </Link>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>

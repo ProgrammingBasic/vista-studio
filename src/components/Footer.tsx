@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Mail, Phone, MapIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -101,17 +101,17 @@ export const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-yellow-300" />
-                <span className="text-white/80">+91 98765 43210</span>
+                <span className="text-white/80">8486 4567 60</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-yellow-300" />
-                <span className="text-white/80">hello@wanderlust.com</span>
+                <span className="text-white/80">Info.discoverfareast@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-travel-teal mt-1" />
+                <MapIcon className="w-5 h-5 text-yellow-300 mt-1" />
                 <span className="text-white/80">
-                  123 Adventure Street<br />
-                  Travel City, TC 12345
+                  Tinsukia,
+                  Assam
                 </span>
               </div>
             </div>
