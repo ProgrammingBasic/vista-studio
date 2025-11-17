@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const CallToAction = () => {
   return (
@@ -24,19 +25,21 @@ export const CallToAction = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-          <Button 
+          {/* <Button 
             size="lg" 
             className="px-8 py-4 text-lg group rounded-none bg-[#31b7d0] hover:bg-[#2a9bb0] text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
-            Book Your Tour Now
+            Plan Your Trip
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button 
-            size="lg" 
-            className="px-8 py-4 rounded-none text-lg bg-yellow-300 hover:bg-400 text-black font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-400"
-          >
-            View All Packages
-          </Button>
+          </Button> */}
+          <Link to="/create-plan">
+            <Button
+              size="lg"
+              className="px-8 py-4 rounded-none text-lg bg-yellow-300 hover:bg-400 text-black font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-400"
+            >
+              Plan Your Trip
+            </Button>
+          </Link>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-white/90">
