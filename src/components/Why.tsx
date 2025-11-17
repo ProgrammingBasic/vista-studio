@@ -7,19 +7,6 @@ import BackgroundImage from "@/assets/topography.svg"
 
 function FarEast() {
 
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    const handlePlayClick = () => {
-        if (videoRef.current) {
-            videoRef.current.play();
-        }
-    };
-
-    const handleVideoPlay = () => {
-        setIsPlaying(true);
-    };
-
 
     const features = [
         {
@@ -86,7 +73,7 @@ function FarEast() {
     ]
 
     return (
-        <section className="py-20 bg-[#f1f9fc]">
+        <section className="pt-20 bg-[#f1f9fc]">
             {/* <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Why FarEast</h2>
@@ -125,7 +112,7 @@ function FarEast() {
             </div> */}
             <div
                 id="sustainability"
-                className='relative z-0 bg-[#31b7d0] h-[1200px] w-full container mx-auto mt-20 rounded-lg py-20 mb-[360px] text-white'
+                className='relative z-0 bg-[#31b7d0] md:h-[1100px] w-full container mx-auto mt-20 rounded-lg py-20 mb-[360px] text-white'
                 style={{
                     backgroundImage: `url(${BackgroundImage})`,
                     // backgroundImage: `url('https://preview.redd.it/northeast-could-be-indias-best-travel-destination-but-it-v0-mto6jsbkuere1.jpeg?width=640&crop=smart&auto=webp&s=38826870944ef2bcae70ec282e6828e7f135caea')`,
@@ -140,35 +127,32 @@ function FarEast() {
                     <p className='max-w-xl mx-auto my-5'>Support community-led climate action to minimise impact on climate change in India and the rest of the planet.</p>
 
 
-                    <div className="relative w-full max-w-6xl mx-auto mt-8">
-                        <video
-                            className="w-full rounded-lg border-8 border-primary"
-                            controls
-                            poster="/video-poster.jpg"
-                            ref={videoRef}
-                            onPlay={handleVideoPlay}
-                        >
-                           <source src="https://www.pexels.com/download/video/28444617/" type="video/mp4" />
-                           Your browser does not support the video tag.
-                        </video>
-
-                        {!isPlaying && (
-                            <button
-                            onClick={handlePlayClick}
-                                className="absolute inset-0 m-auto bg-white text-black px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition"
-                                style={{
-                                    width: "fit-content",
-                                    height: "fit-content",
-                                }}
-                            >
-                                Play Video
-                            </button>
-                        )}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-8">
+                        <div className="h-72 md:h-96">
+                            <iframe
+                                className="w-full h-full rounded-lg border-8 border-primary"
+                                src="https://www.youtube.com/embed/hcU8fU0RnKM"
+                                title="YouTube video player 1"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                        <div className="h-72 md:h-96">
+                            <iframe
+                                className="w-full h-full rounded-lg border-8 border-primary"
+                                src="https://www.youtube.com/embed/d_-ueA_BBks"
+                                title="YouTube video player 2"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     </div>
                     <p className="mt-10 max-w-6xl mx-auto">Our commitment extends beyond showcasing the stunning landscapes of NorthEast India. We are dedicated to responsible tourism that empowers local communities and preserves the natural environment for generations to come. We actively partner with local experts and communities to drive sustainable initiatives. These projects are fundamental to our mission, ensuring that every journey with us contributes positively to the region and its inhabitants.</p>
                     <h3 className="mt-10 text-4xl">Our Ongoing Projects</h3>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 z-10 relative absolute -bottom-[2rem]'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4 z-10 relative absolute -bottom-[4rem]'>
                     {
                         sustainabilityItems.map(item => (
 
@@ -178,7 +162,7 @@ function FarEast() {
                                     <img src={item.image} alt="" className='w-full' />
                                 </div>
                                 <h3 className='text-2xl mb-3 text-primary'>{item.title}</h3>
-                                <p className='text-gray-600'>{item.description}</p>
+                                <p className='text-gray-600 md:text-md text-sm'>{item.description}</p>
                             </div>
 
                         ))
