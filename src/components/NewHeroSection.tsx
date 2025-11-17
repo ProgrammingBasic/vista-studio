@@ -21,12 +21,12 @@ const HeroSection = () => {
                 <div className="max-w-4xl text-center text-white bg-black bg-opacity-30 p-10 py-12 rounded-lg shadow-lg">
                     {/* Main Heading */}
                     <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-6 uppercase leading-relaxed tracking-wider">
-                    What Will You Discover?...Discover Far Far East with us
+                    What Will You Discover?
                     </h1>
 
                     {/* Subheading */}
                     <p className="text-base md:text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-                        Your gateway to authentic and sustainable adventures in the heart of Northeast India.
+                    Discover Far Far East with us
                     </p>
 
                     {/* Call to Action Button */}
