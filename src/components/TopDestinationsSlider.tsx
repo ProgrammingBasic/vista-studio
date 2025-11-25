@@ -3,60 +3,64 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import SectionTitle from "./SectionTitle";
+import Up1 from "@/assets/upcoming/up1.jpeg"
+import Up2 from "@/assets/upcoming/up2.jpeg"
+import Up3 from "@/assets/upcoming/up3.jpeg"
+import Up4 from "@/assets/upcoming/up4.jpeg"
 
 const destinations = [
 	{
 		id: 1,
-		name: "Trekking Tour",
-		image: "https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/08/Trekking-Cover-Photo-1-840x425.jpg",
+		name: "Biodiversity Meet",
+		image: Up1,
 	},
 	{
 		id: 2,
-		name: "Cycle Expedition",
-		image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/43/cf/85/monastery-view-from-city.jpg?w=1200&h=-1&s=1",
+		name: "EagleNest Bird",
+		image: Up2,
 	},
 	{
 		id: 3,
-		name: "Hiking Festival",
-		image: "https://talesofthehiddentrails.wordpress.com/wp-content/uploads/2021/01/139364729_418404549395528_8105984581183889987_n.jpg?w=825&h=510&crop=1",
+		name: "Pakke Paga Hornbill",
+		image: Up3,
 	},
 	{
 		id: 4,
-		name: "Photography Fest",
-		image: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=612,h=919,fit=crop,trim=0;552.4017216642754;0;596.4763271162124/mv0l9yGqjPfjX87X/dsc_7431-YZ9Xllo6W9s96WG3.jpg",
+		name: "Honoring Heroes",
+		image: Up4,
 	},
-	
+
 
 ];
 
 export const TopDestinationsSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerView = 3; // Show only three cards at a time
-    const maxIndex = Math.max(0, destinations.length - itemsPerView);
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const itemsPerView = 3; // Show only three cards at a time
+	const maxIndex = Math.max(0, destinations.length - itemsPerView);
 
-    // Auto-loop logic
-    const intervalRef = useRef<NodeJS.Timeout | null>(null);
+	// Auto-loop logic
+	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    useEffect(() => {
-        intervalRef.current = setInterval(() => {
-            setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-        }, 3500); // Change slide every 3.5 seconds
+	useEffect(() => {
+		intervalRef.current = setInterval(() => {
+			setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+		}, 3500); // Change slide every 3.5 seconds
 
-        return () => {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        };
-    }, [maxIndex]);
+		return () => {
+			if (intervalRef.current) clearInterval(intervalRef.current);
+		};
+	}, [maxIndex]);
 
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    };
+	const nextSlide = () => {
+		setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+	};
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-    };
+	const prevSlide = () => {
+		setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+	};
 
-    return (
-        <section className="py-20 bg-white">
+	return (
+		<section className="py-20 bg-white">
 			<div className="container mx-auto px-6">
 				<SectionTitle title="Upcoming Events & Activities" subtitle="Discover breathtaking locations waiting for your exploration" />
 
@@ -65,9 +69,8 @@ export const TopDestinationsSlider = () => {
 						<div
 							className="flex transition-transform duration-500 ease-in-out gap-2"
 							style={{
-								transform: `translateX(-${
-									currentIndex * (100 / itemsPerView)
-								}%)`,
+								transform: `translateX(-${currentIndex * (100 / itemsPerView)
+									}%)`,
 							}}
 						>
 							{destinations.map((destination) => (
@@ -76,20 +79,20 @@ export const TopDestinationsSlider = () => {
 									className="min-w-0 flex-shrink-0"
 									style={{ width: `${100 / itemsPerView}%` }}
 								>
-									<Card className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[20rem]">
+									<Card className="group overflow-hidden border-0 shadow-card-travel hover:shadow-hover-travel transition-all duration-500 hover:-translate-y-3 cursor-pointer h-[35rem]">
 										{/* Increased height from h-80 to h-[28rem] */}
 										<div className="relative h-full">
 											<img
 												src={destination.image}
 												alt={destination.name}
-												className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+												className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
 											/>
 											<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 											<div className="absolute bottom-6 left-6">
 												<h3 className="text-4xl font-light text-white">
 													{destination.name}
 												</h3>
-                        <p className="text-xl text-gray-300 font-semibold" id="sub-text">Waterfalls &middot; Nature</p>
+												{/* <p className="text-xl text-gray-300 font-semibold" id="sub-text">Waterfalls &middot; Nature</p> */}
 											</div>
 										</div>
 									</Card>
